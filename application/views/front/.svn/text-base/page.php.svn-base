@@ -1,0 +1,16 @@
+<div class="content-contacts">
+<div class="content-top">
+<div class="content-bottom">
+<h2 class="topheading"><span><?=$page['title']?></span></h2>
+<br />
+
+<div id="page_wrapper">
+	<div id="content_top"></div>
+		<div class="content_body" ><?=$page['text']?></div>
+        
+	<div id="content_bottom"></div>
+</div>
+
+</div>
+</div>
+</div>

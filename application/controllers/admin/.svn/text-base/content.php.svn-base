@@ -1,0 +1,127 @@
+<?php
+
+class Content extends CI_Controller
+{
+	private $data;
+
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->helper('http_auth');
+		$this->load->model('mcontent');
+		$this->data['menu_section'] = 'contents';
+		$this->data['msg'] = false;	
+	}
+	
+	function index()
+	{		
+		$this->content_list();
+	}
+	
+	function content_list()
+	{
+		// Get page
+		$this->data['contents'] = $this->mcontent->content_list();
+		
+		// Prepare view
+		$this->data['body'] = 'admin/content/content_list';
+		$this->load->view('admin/layout', $this->data);
+	}
+	
+	function add()
+	{
+		// Prepare view
+		$this->data['action_title'] = 'Добавление новой статьи';
+		$this->data['page'] = array('title_ru' => '', 'title_ua' => '', 'anons_ru' => '', 'anons_ua' => '', 'pub_date' => date('d-m-Y H:i'), 'text_ru' => '', 'text_ua' => '', 'id' => '');
+		$this->data['body'] = 'admin/content/edit_content';
+		$this->load->view('admin/layout', $this->data);
+	}
+	
+	function edit($id)
+	{
+		// Get page
+		$this->data['page'] = $this->mcontent->content_info($id);
+		$this->data['page']['pub_date'] = date('d-m-Y H:i', strtotime($this->data['page']['pub_date']));
+		
+		// Prepare view
+		$this->data['action_title'] = 'Редактирование статьи';
+		$this->data['body'] = 'admin/content/edit_content';
+		$this->load->view('admin/layout', $this->data);
+	}
+	
+	function submit()
+	{
+		// POST data
+		$id = $this->input->post('id');		
+		$content['title_ru'] = $this->input->post('title_ru');
+		$content['title_ua'] = $this->input->post('title_ua');
+		$content['anons_ru'] = $this->input->post('anons_ru');
+		$content['anons_ua'] = $this->input->post('anons_ua');
+		$content['text_ru'] = $this->input->post('text_ru');
+		$content['text_ua'] = $this->input->post('text_ua');
+		$content['pub_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('pub_date')));
+		
+		// Validation
+		// ...
+		
+		// Inserting/Updating
+		if ($id)
+		{
+			$this->mcontent->update_content($id, $content);
+			$this->data['msg']['type'] = 'succeed';
+			$this->data['msg']['text'] = 'Статья "'.$content['title_ru'].'" сохранена.';
+		}
+		else
+		{
+			$this->mcontent->add_content($content);
+			$this->data['msg']['type'] = 'succeed';
+			$this->data['msg']['text'] = 'Статья "'.$content['title_ru'].'" добавлена.';
+		}
+		
+		// Redirecting
+		$this->content_list();
+	}
+	
+	function delete($id)
+	{
+		if ($this->mcontent->content_exists($id))
+		{
+			// Deletting
+			$this->mcontent->delete_content($id);
+			$this->data['msg']['type'] = 'succeed';
+			$this->data['msg']['text'] = 'Статья успешно удалена.';						
+		}
+		else
+		{
+			// Page not found
+			$this->data['msg']['type'] = 'error';
+			$this->data['msg']['text'] = 'Статья не найдена.';	
+		}						
+		
+		// Redirecting
+		$this->content_list();
+	}
+	
+	function change_status($id)
+	{
+		if ($this->mcontent->content_exists($id))
+		{
+			// Deletting
+			$this->mcontent->change_status($id);
+			$this->data['msg']['type'] = 'succeed';
+			$this->data['msg']['text'] = 'Статус успешно изменен.';						
+		}
+		else
+		{
+			// Page not found
+			$this->data['msg']['type'] = 'error';
+			$this->data['msg']['text'] = 'Элемент не найден.';	
+		}						
+		
+		// Redirecting
+		$this->content_list();
+	}
+		
+}
+
+// End of file

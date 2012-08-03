@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/elfresco/!svn/ver/1/application/controllers/admin
+END
+content.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/elfresco/!svn/ver/1/application/controllers/admin/content.php
+END
+pages.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/elfresco/!svn/ver/1/application/controllers/admin/pages.php
+END
+main_page.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/elfresco/!svn/ver/1/application/controllers/admin/main_page.php
+END
+settings.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/elfresco/!svn/ver/1/application/controllers/admin/settings.php
+END
+menu.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/elfresco/!svn/ver/1/application/controllers/admin/menu.php
+END
+articles.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/elfresco/!svn/ver/1/application/controllers/admin/articles.php
+END

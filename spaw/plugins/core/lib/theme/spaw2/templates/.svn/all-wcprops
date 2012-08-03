@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/theme/spaw2/templates
+END
+toolbar_floating.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/theme/spaw2/templates/toolbar_floating.tpl
+END
+editor.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/theme/spaw2/templates/editor.tpl
+END
+dialog_header.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/theme/spaw2/templates/dialog_header.tpl
+END
+editor_floating.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/theme/spaw2/templates/editor_floating.tpl
+END
+dialog_footer.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/theme/spaw2/templates/dialog_footer.tpl
+END

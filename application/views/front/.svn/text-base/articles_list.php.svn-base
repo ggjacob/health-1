@@ -1,0 +1,84 @@
+
+
+   
+<!--a target="_blank" class="mrc__plugin_uber_like_button" href="http://connect.mail.ru/share?share_url=http%3A%2F%2Fwww.odnoklassniki.ru%2Fgame%2Felfresco" data-mrc-config="{'type' : 'button', 'caption-mm' : '2', 'caption-ok' : '3', 'counter' : 'true', 'text' : 'true', 'width' : '100%'}">Нравится</a-->
+<a target="_blank" class="mrc__plugin_uber_like_button" href="http://connect.mail.ru/share?share_url=http%3A%2F%2Felfresco.webkate.com%2Farticle%2F1" data-mrc-config="{'type' : 'button', 'caption-mm' : '1', 'caption-ok' : '3', 'counter' : 'true', 'text' : 'true', 'width' : '100%'}">Нравится</a>
+
+<input type="button" onclick="FAPI.UI.showPermissions(permissions);" value="Permissions">
+<!--input type="button" onclick="FAPI.UI.showInvite('Default text', 'customAttr=customValue');" value="Invite"-->
+
+  <!--input type="button" onclick="FAPI.UI.showNotification('Suggestion text','customAttr=vValue');" value="Notification">
+<input type="button" onclick="FAPI.UI.showConfirmation('test.test','Some text','signature');" value="Show Confirmation">
+<input type="button" onclick="FAPI.UI.setWindowSize(500, 500);" value="Set Size"-->
+
+<div class="content-contacts">
+<div class="content-top">
+<div class="content-bottom">
+<h2 class="topheading"><span><?=lang('articles')?></span></h2>
+<br />
+
+<div id="page_wrapper">
+	<div id="content_top"></div>
+		<div class="content_body">
+		<?php if ($articles) : ?>
+		<?php foreach ($articles as $article) : ?>
+		<div class="article_anons">
+			<h2><a href="<?=$base_url.'article/'.$article['id']?>"><?=$article['title']?></a></h2>
+			<div class="gray"><?=lang('publication date')?>: <?=date('d.m.Y H:i', strtotime($article['pub_date']))?></div>
+			<div>
+				<?=$article['anons']?><br/>
+				<a href="<?=$base_url.'article/'.$article['id']?>">Показать полностю..</a>
+			</div>
+		</div>        
+		<?php endforeach; ?>
+		<?php endif; ?>
+		</div>
+	<div id="content_bottom"></div>
+</div>
+
+</div>
+</div>
+</div>
+<script src="http://api.odnoklassniki.ru/js/fapi.js" type="text/javascript"></script>
+ <script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
+     <!--script type="text/javascript" src="<?=base_url()?>public/js/swfobject.js"></script-->
+ <script type="text/javascript">
+ $(document).ready(function() {
+    FAPI.init('<?=$api_server?>', '<?=$api_connection?>',
+      function() {
+          //success
+          //alert("Succes conection");
+      }, function(error){
+         alert("API initialization failed");
+      });
+     //alert("2");
+
+ });
+ mailru.loader.require("api", function() {
+//эта функция вызовется, когда API загрузится и будут доступны все методы
+
+//инит приложения
+ //mailru.app.init("14E0D643E215FB6D273D3513");
+
+//слушатели событий оплаты
+ mailru.events.listen(mailru.plugin.events.liked, function(result) {
+ alert("11111: " + result.type);
+ });
+
+
+
+    mailru.events.listen(mailru.plugin.events.unliked, function(result){
+        console.log(result.type);
+    });
+ });
+
+
+//var  options = "[{\"name\":\"" + name1 + "\", \"price\":\"2\", \"code\":\"qCoins1\"},{\"name\":\"" + name1 + "\", \"price\":\"3\", \"code\":\"qCoins2\"}]";
+    var  permissions = "[\"PUBLISH TO STREAM\",\"PHOTO CONTENT\" ]";
+
+     //Callback function
+     function API_callback(method, result, data){
+          alert("Method "+method+" finished with result "+result+", "+data);
+      }
+
+    </script>

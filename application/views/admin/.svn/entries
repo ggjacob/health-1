@@ -1,0 +1,83 @@
+10
+
+dir
+1
+http://svn.1gb.ua/elfresco/application/views/admin
+http://svn.1gb.ua/elfresco
+
+
+
+2012-04-28T10:44:48.322152Z
+1
+tepalenko
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+042681dd-88f9-2741-a1ca-2840496d3233
+
+pages
+dir
+
+main_page
+dir
+
+settings
+dir
+
+layout.php
+file
+
+
+
+
+2012-02-21T14:17:38.796875Z
+519fb516cb9c92d60bad63f1baa1c1e0
+2012-04-28T10:44:48.322152Z
+1
+tepalenko
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1512
+
+menu
+dir
+
+articles
+dir
+
+content
+dir
+
+blocks
+dir
+

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars
+END
+format.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/format.toolbar.php
+END
+style.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/style.toolbar.php
+END
+tools.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/tools.toolbar.php
+END
+format_mini.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/format_mini.toolbar.php
+END
+insert.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/insert.toolbar.php
+END
+edit.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/edit.toolbar.php
+END
+mode_strip.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/mode_strip.toolbar.php
+END
+font.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/font.toolbar.php
+END
+table.toolbar.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/elfresco/!svn/ver/1/spaw/plugins/core/lib/toolbars/table.toolbar.php
+END
