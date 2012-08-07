@@ -795,14 +795,14 @@
 /* Typography */
 
 	.label {
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		color: #8f8f8f;
 		font-size: 13px;
 		text-shadow: 0 1px 0 #FFFFFF;
 	}
 
 	.top_search_input {
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		color: #8f8f8f;
 		font-size: 11px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -813,21 +813,21 @@
 	}
 
 	.field_notice {
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		color: #AAAAAA;
 		font-size: 11px;
 		padding-top: 6px;
 	}
 
 	.simple_field, .filename {
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		color: #696969;
 		font-size: 14px;
 		text-shadow: 0 1px 0 #FFFFFF;
 	}
 
 	.dtShowPer, .dtFilter, .dtInfo, .dtPagination {
-		font-family: Droid Sans;
+		font-family:'Andika', sans-serif;
 		color: #8f8f8f;
 		font-size: 13px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -836,19 +836,19 @@
 	.small_count {
 		color: #fafafa;
 		text-shadow: 0 1px 0 #f68710;
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		font-size: 13px;
 	}
 
 	.big_count {
 		color: #fafafa;
 		text-shadow: 0 3px 6px rgba(0, 0, 0, 0.24);
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		font-size: 14px;
 	}
 
 	.tab_label {
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		color: #9D9D9D;
 		font-size: 18px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -856,7 +856,7 @@
 
 	.contact_head {
 		margin: 0;
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		color: #9D9D9D;
 		font-size: 16px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -864,7 +864,7 @@
 	}
 
 	.tab_info {
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		color: #A6A6A6;
 		font-size: 12px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -872,14 +872,14 @@
 
 	.copyright {
 		color: #b9b9b9;
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		font-size: 13px;
 		text-shadow: 0 1px 0 #FFFFFF;
 	}
 
 	.stats_info {
 		color: #b0b0b0;
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		font-size: 18px;
 		text-shadow: 0 1px 0 #FFFFFF;
 		font-weight: normal;	
@@ -887,7 +887,7 @@
 
 	.visitor_stats, .tickets_stats, .users_stats, .orders_stats {
 		color: #f7f7f7;
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		font-size: 24px;
 	}
 
@@ -910,7 +910,7 @@
 	.widget_header_title, .w_Tabs, .ui-dialog-title {
 		margin: 0;
 		color: #9a9a9a;
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		font-size: 14px;
 		text-shadow: 0 1px 0 #FFFFFF;
 		font-weight: normal;	
@@ -1362,13 +1362,13 @@
 
 /* Charts */
 	
-	.charts, .h_bars, .v_bars, .realtime_charts, .donut_charts, .pie_charts {
+	.charts,.charts2, .h_bars, .v_bars, .realtime_charts, .donut_charts, .pie_charts {
 		margin-top: 15px;
 		height:260px;
 	}
 
 	.tickLabel, .legendLabel, .charts_tooltip {
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		color: #8f8f8f;
 		font-size: 13px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -1397,7 +1397,7 @@
 	}
 
 	.pieLabel {
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		text-shadow: 0 1px 0 #FFFFFF;
 	}
 
@@ -1425,7 +1425,7 @@
 	}
 
 	.tables th {
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		color: #9D9D9D;
 		font-size: 13px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -1475,7 +1475,7 @@
 	}
 
 	.tables td {
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		color: #696969;
 		font-size: 14px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -1711,7 +1711,7 @@
 	    height: 26px;
 	    line-height: 26px;
 	    box-shadow: 0 1px 0 #ffffff, 0 1px 0 #ffffff inset;	
-	    font-family: Oswald;
+	    font-family: 'Andika', sans-serif;
 		color: #8f8f8f;
 		font-size: 12px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -1815,7 +1815,7 @@
 
 	.ui-datepicker-next span, .ui-datepicker-prev span {
 		cursor: pointer;
-		font-family: Droid Sans;
+		font-family: 'Andika', sans-serif;
 		color: #818181;
 		font-size: 13px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -1841,7 +1841,7 @@
 
 	.ui-datepicker-title {
 		text-align: center;
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		color: #9A9A9A;
 		font-size: 14px;
 		text-shadow: 0 1px 0 #FFFFFF;
@@ -1861,7 +1861,7 @@
 		display: block;
 		padding: 0 8px;
 		color: #696969;
-	    font-family: Droid Sans;
+	    font-family: 'Andika', sans-serif;
 	    font-size: 14px;
 	    text-shadow: 0 1px 0 #FFFFFF;
 	    line-height: 28px;
@@ -2233,7 +2233,7 @@
 
 	.success, .alert, .error, .info {
 		cursor: pointer;
-		font-family: Oswald;
+		font-family: 'Andika', sans-serif;
 		font-size: 14px;
 		text-align: center;
 		height: 45px;

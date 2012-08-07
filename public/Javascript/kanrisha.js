@@ -35,7 +35,7 @@ $(function () {
 	}
 
 /* Charts ============================================ */
-	
+/*
 	if (!!$(".charts").offset() ) {
 		var sin = [];
 		var cos = [];
@@ -233,7 +233,7 @@ $(function () {
 			realtime_function();
 		}
 	}
-
+*/
 	// Pie Charts
 	if(!!$(".pie_charts").offset()){
 		$.plot($(".pie_charts"), [ { label: "iOS", data: 50 }, { label: "Android", data: 40 }, { label: "Windows", data: 30 }],

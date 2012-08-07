@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kanrisha - A Premium HTML5 Responsive Admin Template</title>
+    <link href='http://fonts.googleapis.com/css?family=Andika&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -226,248 +227,50 @@
 
 <aside class="sidebar">
     <ul class="tab_nav">
-        <li class="active_tab i_32_dashboard">
-            <a href="index.html" title="General Info">
-                <span class="tab_label">Dashboard</span>
-                <span class="tab_info">General Info</span>
+        <li class="<? if($menu_item == 'tables')echo 'active_tab ';?> i_32_dashboard">
+            <a href="/" title="General Info">
+                <span class="tab_label">Таблица</span>
+                <span class="tab_info">Графики</span>
             </a>
         </li>
-        <li class="i_32_inbox">
-            <a href="inbox.html" title="Your Messages">
-                <span class="tab_label">Inbox</span>
-                <span class="tab_info">Your Messages</span>
+        <li class="<? if($menu_item == 'forms')echo 'active_tab ';?> i_32_inbox">
+            <a href="/main/forms" title="Your Messages">
+                <span class="tab_label">Сегодня</span>
+                <span class="tab_info">Ваш баланс</span>
             </a>
         </li>
-        <li class="i_32_charts">
-            <a href="charts.html" title="Visual Data">
-                <span class="tab_label">Charts</span>
-                <span class="tab_info">Visual Data</span>
+        <li class="i_32_tables">
+            <a href="" title="Visual Data">
+                <span class="tab_label">Инфо</span>
+                <span class="tab_info">Аминокислоты в продуктах</span>
             </a>
         </li>
         <li class="i_32_ui">
             <a href="ui.html" title="Kit elements">
-                <span class="tab_label">UI</span>
-                <span class="tab_info">Kit elements</span>
+                <span class="tab_label">Статьи</span>
+                <span class="tab_info">Полезное</span>
             </a>
         </li>
-        <li class="i_32_tables">
-            <a href="tables.html" title="Some Rows">
-                <span class="tab_label">Tables</span>
-                <span class="tab_info">Some Rows</span>
+        <li class=" <? if($menu_item == 'new_product')echo 'active_tab ';?> i_32_tables">
+            <a href="<?=base_url()?>main/new_product" title="Some Rows">
+                <span class="tab_label">Внести</span>
+                <span class="tab_info">Новый продукт</span>
             </a>
         </li>
-        <li class="i_32_forms">
+        <!--li class="i_32_forms">
             <a href="forms.html" title="Some Fields">
                 <span class="tab_label">Forms</span>
                 <span class="tab_info">Some Fields</span>
             </a>
-        </li>
+        </li-->
     </ul>
 </aside>
 
 <div class="contents">
 <div class="grid_wrapper">
+    <?=$this->load->view($content)?>
 
-<div class="g_6 contents_header">
-    <h3 class="i_16_dashboard tab_label">Dashboard</h3>
-    <div><span class="label">General Informations and Resume</span></div>
-</div>
-<div class="g_6 contents_options">
-    <div class="simple_buttons">
-        <div class="bwIcon i_16_help">Help</div>
-    </div>
-    <div class="simple_buttons">
-        <div class="bwIcon i_16_settings">Settings</div>
-        <div class="buttons_arrow">
-            <!-- Drop Menu -->
-            <ul class="drop_menu menu_with_icons right_direction">
-                <li>
-                    <a class="i_16_add" href="#" title="New Flie">
-                        <span class="label">New File</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="i_16_progress" href="#" title="2 Files Left">
-                        <span class="label">Files Left</span>
-                        <span class="small_count">2</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="i_16_files" href="#" title="Browse Files">
-                        <span class="label">Browse Files</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
 
-<div class="g_12 separator"><span></span></div>
-
-<!-- Quick Statistics -->
-<div class="g_3 quick_stats">
-    <div class="big_stats visitor_stats">
-        9827
-    </div>
-    <h5 class="stats_info">New Visitor</h5>
-</div>
-<div class="g_3 quick_stats">
-    <div class="big_stats tickets_stats">
-        23
-    </div>
-    <h5 class="stats_info">Open Tickets</h5>
-</div>
-<div class="g_3 quick_stats">
-    <div class="big_stats users_stats">
-        982
-    </div>
-    <h5 class="stats_info">Users</h5>
-</div>
-<div class="g_3 quick_stats">
-    <div class="big_stats orders_stats">
-        2045
-    </div>
-    <h5 class="stats_info">Orders</h5>
-</div>
-
-<div class="g_12 separator under_stat"><span></span></div>
-
-<!-- Charts -->
-<div class="g_12">
-    <div class="widget_header">
-        <h4 class="widget_header_title wwIcon i_16_charts">Charts</h4>
-    </div>
-    <div class="widget_contents">
-        <div class="charts"></div>
-    </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
-<!-- Chats -->
-<div class="g_6">
-    <div class="widget_header">
-        <h4 class="widget_header_title wwIcon i_16_chats">Chats</h4>
-    </div>
-    <div class="widget_contents noPadding">
-        <div class="line_grid">
-            <div class="g_2 g_2M">
-                <img src="<?=base_url()?>public/Images/Avatar/avatar1.png" alt="avatar" class="avatar" />
-            </div>
-            <div class="g_10 g_10M">
-                <div class="message">
-									<span class="label lwParagraph">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis urna dui. Vestibulum adipiscing venenatis elementum. 
-									</span>
-                </div>
-            </div>
-        </div>
-        <div class="line_grid">
-            <div class="g_10 g_10M">
-                <div class="message">
-									<span class="label lwParagraph">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis urna dui. Vestibulum adipiscing venenatis elementum. 
-									</span>
-                </div>
-            </div>
-            <div class="g_2 g_2M">
-                <img src="<?=base_url()?>public/Images/Avatar/avatar3.png" alt="avatar" class="avatar aR" />
-            </div>
-        </div>
-        <div class="line_grid">
-            <div class="g_2 g_2M">
-                <img src="<?=base_url()?>public/Images/Avatar/avatar1.png" alt="avatar" class="avatar" />
-            </div>
-            <div class="g_10 g_10M">
-                <div class="message">
-									<span class="label lwParagraph">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis urna dui. Vestibulum adipiscing venenatis elementum. 
-									</span>
-                </div>
-            </div>
-        </div>
-        <div class="line_grid">
-            <div class="g_2 g_2M">
-                <img src="<?=base_url()?>public/Images/Avatar/avatar2.png" alt="avatar" class="avatar" />
-            </div>
-            <div class="g_10 g_10M">
-                <textarea placeholder="Type your Message and press Enter .." class="mpReply elastic simple_field"></textarea>
-                <div class="field_notice">This Textarea is Elastic :)</div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Pie Charts -->
-<div class="g_6">
-    <div class="widget_header">
-        <h4 class="widget_header_title wwIcon i_16_pie">Pie Charts</h4>
-    </div>
-    <div class="widget_contents">
-        <div class="pie_charts"></div>
-    </div>
-</div>
-<div class="g_6">
-    <div class="widget_header">
-        <h4 class="widget_header_title wwIcon i_16_add">Upload New</h4>
-    </div>
-    <div class="widget_contents noPadding">
-        <div class="line_grid">
-            <div class="g_12">
-                <input type="file" class="simple_form" />
-                <div class="field_notice">Max Size: 20Mb</div>
-            </div>
-        </div>
-        <div class="line_grid">
-            <div class="g_12">
-                <input type="submit" value="Upload .." class="simple_buttons" />
-            </div>
-        </div>
-    </div>
-</div>
-<div class="g_12">
-    <div class="widget_header">
-        <h4 class="widget_header_title wwIcon i_16_add">New Article</h4>
-    </div>
-    <div class="widget_contents noPadding">
-        <div class="line_grid">
-            <div class="g_12">
-                <textarea class="simple_field wysiwyg"></textarea>
-                <div class="field_notice">What You See Is What You Get ;)</div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
-<!-- Calendar -->
-<div class="g_12">
-    <div class="widget_header wwOptions">
-        <h4 class="widget_header_title wwIcon i_16_calendar">Calendar</h4>
-        <div class="w_Options i_16_settings">
-            <!-- Drop Menu -->
-            <ul class="drop_menu menu_with_icons right_direction">
-                <li>
-                    <a class="i_16_add" href="#" title="New Flie">
-                        <span class="label">New File</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="i_16_progress" href="#" title="2 Files Left">
-                        <span class="label">Files Left</span>
-                        <span class="small_count">2</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="i_16_files" href="#" title="Browse Files">
-                        <span class="label">Browse Files</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="widget_contents noPadding">
-        <div class="aCalendar autoPadding"></div>
-    </div>
-</div>
 </div>
 </div>
 
