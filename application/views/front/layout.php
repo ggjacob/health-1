@@ -67,7 +67,7 @@
     <div class="wrapper">
         <div class="user">
             <img src="<?=base_url()?>public/Images/user_avatar.png" alt="user_avatar" class="user_avatar" />
-            <span class="label">John Alex</span>
+            <span class="label"><?=$user['username']?></span>
             <!-- Top Tooltip -->
             <div class="top_tooltip">
                 <div>

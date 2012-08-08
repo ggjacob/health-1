@@ -5,10 +5,13 @@ class Main extends ControllerBase  {
     function __construct()
     {
         parent::__construct();
-        $this->load->model(array('mconfig', 'mpages', 'mmenu', 'marticles', 'mproducts', 'mcalories'));
+        $this->load->library('session');
+        if($this->session->userdata('is_login') != 'ok')redirect('main/login');
+        $this->load->model(array('mconfig', 'mpages', 'mmenu', 'marticles', 'mproducts', 'mcalories', 'musers'));
+        $this->data['user'] = $this->musers->get_user($this->session->userdata('user'));
+
         $this->data['menu_id'] = 0;
     }
-
 	public function index()
 	{
         $this->data['menu_item'] =  'tables';
@@ -34,6 +37,7 @@ class Main extends ControllerBase  {
         $this->data['content'] = 'front/forms';
         $this->load->view('front/layout', $this->data);
     }
+
     public function new_product()
     {
         if(empty($_POST)){

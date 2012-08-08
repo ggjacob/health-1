@@ -79,8 +79,8 @@
     });
 </script>
 <div class="g_6 contents_header">
-    <h3 class="i_16_dashboard tab_label">Dashboard</h3>
-    <div><span class="label">General Informations and Resume</span></div>
+    <h3 class="i_16_dashboard tab_label">Графики</h3>
+    <div><span class="label">Ваше употребление полезных виществ</span></div>
 </div>
 <div class="g_6 contents_options">
     <div class="simple_buttons">
