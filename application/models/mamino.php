@@ -1,6 +1,6 @@
 <?php
 
-class Mproducts extends CI_Model
+class Mamino extends CI_Model
 {
 	public $language;
 	
@@ -9,13 +9,28 @@ class Mproducts extends CI_Model
 		parent::__construct();
 		$this->language = $this->config->item('cur_lang') ? $this->config->item('cur_lang') : $this->config->item('language');
 	}
+    function set_amino($amino_name, $data)
+    {
+        $this->db->insert($amino_name, $data);
+    }
+
+    function get_amino_by_user($amino_name, $user_id)
+    {
+        $this->db->where('user_id', $user_id);
+        $this->db->order_by('date','DESC');
+        $query = $this->db->get($amino_name);
+        $result = $query->result_array();
+        return $result ? $result : false;
+    }
+
+
+
+    /// end //////
     function products_list()
     {
-        $this->db->order_by('name', 'ASC');
         $query = $this->db->get('products');
         $result = $query->result_array();
         //echo  $this->db->last_query();die;
-
         return $result ? $result : false;
     }
     function get_product($id)
@@ -24,20 +39,6 @@ class Mproducts extends CI_Model
         $query = $this->db->get('products');
         $result = $query->row_array();
         return $result ? $result : false;
-    }
-    function set_product($data)
-    {
-        $this->db->insert('products', $data);
-    }
-    function update_product($id, $data)
-    {
-        $this->db->where('id', $id);
-        $this->db->update('products', $data);
-    }
-    function delete_product($id)
-    {
-        $this->db->where('id', $id);
-        $this->db->delete('products');
     }
 	function events_list($fields = null, $filter = null, $order_cat = null, $order_by = null, $time_now = null)
 	{

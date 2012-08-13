@@ -288,48 +288,6 @@ $(function () {
 			});
 		}
 	}
-	
-/* Tables ============================================ */
-	// Set the DataTables
-	$(".datatable").dataTable({
-        "sDom": "<'dtTop'<'dtShowPer'l><'dtFilter'f>><'dtTables't><'dtBottom'<'dtInfo'i><'dtPagination'p>>",
-        "oLanguage": {
-            "sLengthMenu": "Show entries _MENU_",
-        },
-        "sPaginationType": "full_numbers",
-        "fnInitComplete": function(){
-        	$(".dtShowPer select").uniform();
-        	$(".dtFilter input").addClass("simple_field").css({
-        		"width": "auto",
-        		"margin-left": "15px",
-        	});
-        }
-    });
-
-	// Table Resize-able
-	$(".resizeable_tables").colResizable({
-		liveDrag: true,
-		minWidth: 40,
-	});
-
-	// Table with Tabs
-	$( "#table_wTabs" ).tabs();
-	
-	// Check All Checkbox
-	$(".tMainC").click(function(){
-		var checked = $(this).prop("checked");
-		var parent = $(this).closest(".twCheckbox");
-
-		parent.find(".checker").each(function(){
-			if (checked){
-				$(this).find("span").addClass("checked");
-				$(this).find("input").prop("checked", true);
-			}else{
-				$(this).find("span").removeClass("checked");
-				$(this).find("input").prop("checked", false);
-			}
-		})
-	});
 
 /* Forms ============================================= */
 	$(".simple_form").uniform(); // Style The Checkbox and Radio

@@ -15,6 +15,8 @@
             </div>
             <div class="g_9">
                 <select class="simple_form" name="product">
+
+                    <option  value="Выберите продукт" selected="selected" />Выберите продукт
                     <? foreach($products as $product):?>
                         <option value="<?=$product['id']?>" /><?=$product['name']?>
                     <? endforeach; ?>

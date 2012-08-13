@@ -1362,7 +1362,22 @@
 
 /* Charts */
 	
-	.charts,.charts2, .h_bars, .v_bars, .realtime_charts, .donut_charts, .pie_charts {
+	.charts,
+    .charts_cal,
+    .charts_treonin,
+    .charts_izolicin,
+    .charts_leycin,
+    .charts_lizin,
+    .charts_fenil,
+    .charts_valin,
+    .charts_metonin,
+    .charts_gistidin,
+    .charts_triptofan,
+    .h_bars,
+    .v_bars,
+    .realtime_charts,
+    .donut_charts,
+    .pie_charts {
 		margin-top: 15px;
 		height:260px;
 	}
@@ -1409,7 +1424,7 @@
 
 	.tables th, .tables td {
 		border: 1px solid #E0E0E0;
-	    padding: 4px 15px;
+	    padding: 4px 20px 4px 2px;
 	}
 
 	.tables thead tr {

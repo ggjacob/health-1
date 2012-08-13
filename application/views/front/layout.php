@@ -234,13 +234,13 @@
             </a>
         </li>
         <li class="<? if($menu_item == 'forms')echo 'active_tab ';?> i_32_inbox">
-            <a href="/main/forms" title="Your Messages">
+            <a href="<?=base_url()?>main/forms" title="Your Messages">
                 <span class="tab_label">Сегодня</span>
                 <span class="tab_info">Ваш баланс</span>
             </a>
         </li>
-        <li class="i_32_tables">
-            <a href="" title="Visual Data">
+        <li class="<? if($menu_item == 'info')echo 'active_tab ';?> i_32_tables">
+            <a href="<?=base_url()?>main/info" title="Visual Data">
                 <span class="tab_label">Инфо</span>
                 <span class="tab_info">Аминокислоты в продуктах</span>
             </a>
