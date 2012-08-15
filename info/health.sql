@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Авг 13 2012 г., 20:55
+-- Время создания: Авг 15 2012 г., 16:08
 -- Версия сервера: 5.5.8
 -- Версия PHP: 5.3.5
 
@@ -414,6 +414,34 @@ INSERT INTO `metonin` (`id`, `user_id`, `value`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `norma`
+--
+
+CREATE TABLE IF NOT EXISTS `norma` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `norma` int(5) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Дамп данных таблицы `norma`
+--
+
+INSERT INTO `norma` (`id`, `name`, `norma`) VALUES
+(1, 'treonin', 60),
+(2, 'izolicin', 90),
+(3, 'leycin', 150),
+(4, 'lizin', 150),
+(5, 'fenil', 90),
+(6, 'valin', 93),
+(7, 'metonin', 85),
+(8, 'gistidin', 32),
+(9, 'triptofan', 22);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `owner`
 --
 
@@ -580,6 +608,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
   `username` varchar(255) CHARACTER SET utf8 NOT NULL,
   `pass` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `weight` varchar(10) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
@@ -587,8 +616,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `username`, `pass`) VALUES
-(1, 'dimon', 'men', '96e79218965eb72c92a549dd5a330112');
+INSERT INTO `users` (`id`, `name`, `username`, `pass`, `weight`) VALUES
+(1, 'dimon', 'men', '96e79218965eb72c92a549dd5a330112', '57');
 
 -- --------------------------------------------------------
 
