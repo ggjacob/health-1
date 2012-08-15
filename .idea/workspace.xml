@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c87f9d1e-473a-45cc-9526-32d70eee76b7" name="Default" comment="" />
-    <ignored path="health.iws" />
+    <list default="true" readonly="true" id="c87f9d1e-473a-45cc-9526-32d70eee76b7" name="Default" comment="" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="health.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +13,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+    <option name="REVERSE_PATCH" value="false" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -20,12 +21,22 @@
   <component name="FavoritesManager">
     <favorites_list name="health" />
   </component>
+  <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="199" column="48" selection-start="7340" selection-end="7340" vertical-scroll-proportion="-23.92">
+            <state line="25" column="24" selection-start="973" selection-end="973" vertical-scroll-proportion="-12.92">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="musers.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/musers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="32" selection-start="378" selection-end="397" vertical-scroll-proportion="-12.24">
               <folding />
             </state>
           </provider>
@@ -34,7 +45,7 @@
       <file leaf-file-name="mamino.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/mamino.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="22" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+            <state line="24" column="24" selection-start="639" selection-end="650" vertical-scroll-proportion="-14.28">
               <folding />
             </state>
           </provider>
@@ -52,7 +63,7 @@
       <file leaf-file-name="new_product.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/front/new_product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="139" selection-start="5729" selection-end="5729" vertical-scroll-proportion="-66.5">
+            <state line="129" column="139" selection-start="5729" selection-end="5729" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,7 +81,7 @@
       <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/front/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="556" column="32" selection-start="18845" selection-end="18845" vertical-scroll-proportion="-0.0742496">
+            <state line="406" column="18" selection-start="15089" selection-end="15089" vertical-scroll-proportion="0.6651217">
               <folding />
             </state>
           </provider>
@@ -88,25 +99,7 @@
       <file leaf-file-name="forms.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/front/forms.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="31" selection-start="261" selection-end="261" vertical-scroll-proportion="-3.9230769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://D:/Health/Kanrisha/Kanrisha/Kanrisha/HTML/forms.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="432" column="99" selection-start="14672" selection-end="14735" vertical-scroll-proportion="-5.470588">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/front/layout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="19" selection-start="1263" selection-end="1273" vertical-scroll-proportion="0.0">
+            <state line="22" column="25" selection-start="960" selection-end="960" vertical-scroll-proportion="-14.96">
               <folding />
             </state>
           </provider>
@@ -120,26 +113,26 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="GIT_EXECUTABLE" value="git.exe" />
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
-    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
-    <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+    <option name="LINE_SEPARATORS_CONVERSION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/front/login.php" />
-        <option value="$PROJECT_DIR$/application/models/musers.php" />
         <option value="$PROJECT_DIR$/application/controllers/login.php" />
         <option value="$PROJECT_DIR$/application/views/front/layout.php" />
         <option value="$PROJECT_DIR$/public/Javascript/kanrisha.js" />
         <option value="$PROJECT_DIR$/application/views/front/info_tables.php" />
         <option value="$PROJECT_DIR$/application/models/mproducts.php" />
-        <option value="$PROJECT_DIR$/application/models/mamino.php" />
         <option value="$PROJECT_DIR$/application/views/front/forms.php" />
         <option value="$PROJECT_DIR$/application/views/front/new_product.php" />
-        <option value="$PROJECT_DIR$/application/controllers/main.php" />
         <option value="$PROJECT_DIR$/public/CSS/style.css" />
+        <option value="$PROJECT_DIR$/application/models/mamino.php" />
+        <option value="$PROJECT_DIR$/application/models/musers.php" />
+        <option value="$PROJECT_DIR$/application/controllers/main.php" />
         <option value="$PROJECT_DIR$/application/views/front/main.php" />
       </list>
     </option>
@@ -150,7 +143,7 @@
     <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -318,6 +311,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -326,19 +320,37 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" scope="Directory">
-      <TestRunner />
       <method>
         <option name="PhingTarget" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method>
         <option name="PhingTarget" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="UPDATE_RUN_STATUS" value="false" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <configuration useDefault="false">C:\Documents and Settings\Admin\Application Data\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c87f9d1e-473a-45cc-9526-32d70eee76b7" name="Default" comment="" />
@@ -348,23 +360,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
+    <frame x="-4" y="-4" width="1928" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32749325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25862068" sideWeight="0.55121297" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25862068" sideWeight="0.4393531" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25843883" sideWeight="0.55725193" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25843883" sideWeight="0.4351145" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32749325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -376,15 +389,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
-    <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
-    </option>
     <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
@@ -394,15 +398,6 @@
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -422,11 +417,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Health/Kanrisha/Kanrisha/Kanrisha/HTML/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="7" selection-start="2215" selection-end="3731" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/front/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="61" selection-start="3782" selection-end="3782" vertical-scroll-proportion="0.0" />
@@ -437,18 +427,9 @@
         <state line="226" column="35" selection-start="7546" selection-end="7546" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://D:/Health/Kanrisha/Kanrisha/Kanrisha/HTML/tables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="983" column="22" selection-start="16669" selection-end="25519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/front/info_tables.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="1886" selection-end="2285" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="66" column="0" selection-start="1886" selection-end="2285" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/Javascript/kanrisha.js">
@@ -458,70 +439,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/front/layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="1263" selection-end="1273" vertical-scroll-proportion="0.0">
+        <state line="25" column="19" selection-start="1263" selection-end="1273" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/mcalories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="5" selection-start="243" selection-end="330" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/new_product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="139" selection-start="5729" selection-end="5729" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/mproducts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="38" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="38" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://D:/Health/Kanrisha/Kanrisha/Kanrisha/HTML/forms.html">
+    <entry file="file://$PROJECT_DIR$/public/CSS/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="432" column="99" selection-start="14672" selection-end="14735" vertical-scroll-proportion="-5.470588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/mcalories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="5" selection-start="243" selection-end="330" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1369" column="18" selection-start="34419" selection-end="34419" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/front/forms.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="31" selection-start="261" selection-end="261" vertical-scroll-proportion="-3.9230769">
+        <state line="22" column="25" selection-start="960" selection-end="960" vertical-scroll-proportion="-14.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/musers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="32" selection-start="378" selection-end="397" vertical-scroll-proportion="-12.24">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/mamino.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/front/new_product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="139" selection-start="5729" selection-end="5729" vertical-scroll-proportion="-66.5">
+        <state line="24" column="24" selection-start="639" selection-end="650" vertical-scroll-proportion="-14.28">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="48" selection-start="7340" selection-end="7340" vertical-scroll-proportion="-23.92">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/CSS/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1369" column="18" selection-start="34419" selection-end="34419" vertical-scroll-proportion="0.0">
+        <state line="25" column="24" selection-start="973" selection-end="973" vertical-scroll-proportion="-12.92">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/front/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="556" column="32" selection-start="18845" selection-end="18845" vertical-scroll-proportion="-0.0742496">
+        <state line="406" column="18" selection-start="15089" selection-end="15089" vertical-scroll-proportion="0.6651217">
           <folding />
         </state>
       </provider>

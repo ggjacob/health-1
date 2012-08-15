@@ -15,6 +15,16 @@ class Main extends ControllerBase  {
 	public function index()
 	{
         $this->data['menu_item'] =  'tables';
+        $this->data['user_info'] = $this->musers->get_user_by_id(1);
+        $norma = $this->mamino->get_norma();
+        $norma_by_name = array();
+        foreach($norma as $item){
+            if(!isset($norma_by_name[$item['date']])){
+                $norma_by_name[$item['name']] = $item['norma'];
+            }
+        }
+        $this->data['norma'] =  $norma_by_name;
+       
         $cal = $this->mcalories->get_calories_by_user(1);
 
         $calories_by_date = array();
