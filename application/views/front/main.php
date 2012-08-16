@@ -70,13 +70,14 @@
             }
         });
         var treonin = [];
+        var treonin_norma = [];
         <? foreach($treonin as $key => $val):?>
         treonin.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
-        // cos2.push(['<?=$key?>', <?=$val?>]);
+        treonin_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['treonin']*$user_info['weight']?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_treonin"), [ { label: "Cos", data: treonin }, { label: "Sin", data: treonin    } ],
+        $.plot($(".charts_treonin"), [ { label: "Норма", data: treonin_norma }, { label: "Ваш уровень", data: treonin    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -111,13 +112,14 @@
                 },
             });
         var izolicin = [];
+        var izolicin_norma = [];
         <? foreach($izolicin as $key => $val):?>
         izolicin.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
-        // cos2.push(['<?=$key?>', <?=$val?>]);
+        izolicin_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['izolicin']*$user_info['weight']?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_izolicin"), [ { label: "Cos", data: izolicin }, { label: "Sin", data: izolicin    } ],
+        $.plot($(".charts_izolicin"), [ { label: "Норма", data: izolicin_norma }, { label: "Ваш уровень", data: izolicin    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -152,13 +154,14 @@
                 },
             });
         var leycin = [];
-    <? foreach($leycin as $key => $val):?>
+        var leycin_norma = [];
+        <? foreach($leycin as $key => $val):?>
         leycin.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
-        // cos2.push(['<?=$key?>', <?=$val?>]);
+        leycin_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['leycin']*$user_info['weight']?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_leycin"), [ { label: "Cos", data: leycin }, { label: "Sin", data: leycin    } ],
+        $.plot($(".charts_leycin"), [ { label: "Норма", data: leycin_norma }, { label: "Ваш уровень", data: leycin    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -193,13 +196,14 @@
                 },
             });
         var lizin = [];
-    <? foreach($lizin as $key => $val):?>
+        var lizin_norma = [];
+        <? foreach($lizin as $key => $val):?>
         lizin.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
-        // cos2.push(['<?=$key?>', <?=$val?>]);
+        lizin_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['lizin']*$user_info['weight']?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_lizin"), [ { label: "Cos", data: lizin }, { label: "Sin", data: lizin    } ],
+        $.plot($(".charts_lizin"), [ { label: "Норма", data: lizin_norma }, { label: "Ваш уровень", data: lizin    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -234,13 +238,14 @@
                 },
             });
         var fenil = [];
-    <? foreach($fenil as $key => $val):?>
+        var fenil_norma = [];
+        <? foreach($fenil as $key => $val):?>
         fenil.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
-        // cos2.push(['<?=$key?>', <?=$val?>]);
+        fenil_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['fenil']*$user_info['weight']?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_fenil"), [ { label: "Cos", data: fenil }, { label: "Sin", data: fenil    } ],
+        $.plot($(".charts_fenil"), [ { label: "Норма", data: fenil_norma }, { label: "Ваш уровень", data: fenil    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -275,13 +280,14 @@
                 },
             });
         var valin = [];
-    <? foreach($valin as $key => $val):?>
+        var valin_norma = [];
+        <? foreach($valin as $key => $val):?>
         valin.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
-        // cos2.push(['<?=$key?>', <?=$val?>]);
+        valin_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['valin']*$user_info['weight']?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_valin"), [ { label: "Cos", data: valin }, { label: "Sin", data: valin    } ],
+        $.plot($(".charts_valin"), [ { label: "Норма", data: valin_norma }, { label: "Ваш уровень", data: valin    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -316,13 +322,15 @@
                 },
             });
         var metonin = [];
+          var metonin_norma = [];
     <? foreach($metonin as $key => $val):?>
         metonin.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
+            metonin_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['metonin']*$user_info['weight']?>]);
         // cos2.push(['<?=$key?>', <?=$val?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_metonin"), [ { label: "Cos", data: metonin }, { label: "Sin", data: metonin    } ],
+        $.plot($(".charts_metonin"), [ { label: "Норма", data: metonin_norma }, { label: "Ваш уровень", data: metonin    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -357,13 +365,14 @@
                 },
             });
         var gistidin = [];
-    <? foreach($gistidin as $key => $val):?>
+        var gistidin_norma = [];
+        <? foreach($gistidin as $key => $val):?>
         gistidin.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
-        // cos2.push(['<?=$key?>', <?=$val?>]);
+        gistidin_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['gistidin']*$user_info['weight']?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_gistidin"), [ { label: "Cos", data: gistidin }, { label: "Sin", data: gistidin    } ],
+        $.plot($(".charts_gistidin"), [ { label: "Норма", data: gistidin_norma }, { label: "Ваш уровень", data: gistidin    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -398,13 +407,14 @@
                 },
             });
         var triptofan = [];
-    <? foreach($triptofan as $key => $val):?>
+        var triptofan_norma = [];
+        <? foreach($triptofan as $key => $val):?>
         triptofan.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
-        // cos2.push(['<?=$key?>', <?=$val?>]);
+        triptofan_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['triptofan']*$user_info['weight']?>]);
         <? endforeach;?>
         // console.log(data);
         // Display the Sin and Cos Functions
-        $.plot($(".charts_triptofan"), [ { label: "Cos", data: triptofan }, { label: "Sin", data: triptofan    } ],
+        $.plot($(".charts_triptofan"), [ { label: "Норма", data: triptofan_norma }, { label: "Ваш уровень", data: triptofan    } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 

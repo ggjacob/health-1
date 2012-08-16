@@ -22,6 +22,13 @@ class Mamino extends CI_Model
         $result = $query->result_array();
         return $result ? $result : false;
     }
+    function get_norma()
+    {
+        $this->db->select('name, norma');
+        $query = $this->db->get('norma');
+        $result = $query->result_array();
+        return $result ? $result : false;
+    }
 
 
 

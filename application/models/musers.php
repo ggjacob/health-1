@@ -16,6 +16,13 @@ class Musers extends CI_Model
         //echo  $this->db->last_query();die;
         return $result ? $result : false;
     }
+    function get_user_by_id($id)
+    {
+        $this->db->where('id', $id);
+        $query = $this->db->get('users');
+        $result = $query->row_array();
+        return $result ? $result : false;
+    }
 
 }
 
