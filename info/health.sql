@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Авг 15 2012 г., 16:08
+-- Время создания: Авг 20 2012 г., 20:09
 -- Версия сервера: 5.5.8
 -- Версия PHP: 5.3.5
 
@@ -609,15 +609,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(255) CHARACTER SET utf8 NOT NULL,
   `pass` varchar(255) CHARACTER SET utf8 NOT NULL,
   `weight` varchar(10) CHARACTER SET utf8 NOT NULL,
+  `available` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `username`, `pass`, `weight`) VALUES
-(1, 'dimon', 'men', '96e79218965eb72c92a549dd5a330112', '57');
+INSERT INTO `users` (`id`, `name`, `username`, `pass`, `weight`, `available`) VALUES
+(1, 'dimon', 'men', '96e79218965eb72c92a549dd5a330112', '57', 1),
+(2, 'ira', 'ira', '96e79218965eb72c92a549dd5a330112', '52', 1);
 
 -- --------------------------------------------------------
 

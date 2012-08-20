@@ -270,11 +270,22 @@ class Main extends ControllerBase  {
         $this->mamino->set_amino('triptofan',$data);
         redirect( '/' );
     }
-    function test_main()
-	{
-		$this->data['main_menu'] = $this->mmenu->menu_items(array('status' => '1'), true);
-		$this->data['content'] = 'front/main';
-        $this->load->view('front/layout', $this->data);
-	}
+    public function registration()
+    {
+        if(empty($_POST)){
+            $this->load->view('front/registration', $this->data);
+        }else{
+            $data = array(
+                'name' => $_POST['name'],
+                'username' => $_POST['nickname'],
+                'available' => 1,
+                'weight' => $_POST['weight'],
+                'pass' => md5($_POST['password'])            );
+            $this->musers->add_user($data);
+
+
+            redirect("/main");
+        }
+    }
 }
 

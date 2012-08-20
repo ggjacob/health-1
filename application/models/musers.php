@@ -23,6 +23,10 @@ class Musers extends CI_Model
         $result = $query->row_array();
         return $result ? $result : false;
     }
+    function add_user($data)
+    {
+        $this->db->insert('users', $data);
+    }
 
 }
 
