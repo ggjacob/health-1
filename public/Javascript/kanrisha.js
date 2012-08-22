@@ -659,4 +659,5 @@ $(function () {
 			$(this).parent().remove();
 		});
 	});
+    $( "#table_wTabs" ).tabs();
 });

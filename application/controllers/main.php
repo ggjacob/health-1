@@ -24,10 +24,11 @@ class Main extends ControllerBase  {
             }
         }
         $this->data['norma'] =  $norma_by_name;
-       
+       // echo $this->data['user']['id'];die;
         $cal = $this->mcalories->get_calories_by_user($this->data['user']['id']);
 
         $calories_by_date = array();
+        if(!empty($cal)){
         foreach($cal as $item){
             if(!isset($calories_by_date[$item['date']])){
                 $calories_by_date[$item['date']] = $item['value'];
@@ -35,10 +36,12 @@ class Main extends ControllerBase  {
                 $calories_by_date[$item['date']] = $calories_by_date[$item['date']] +$item['value'];
             }
         }
+        }
         $this->data['calories'] = $calories_by_date;
         // tereonin
         $treonin = $this->mamino->get_amino_by_user('treonin', $this->data['user']['id']);
         $treonin_by_date = array();
+        if(!empty($treonin)){
         foreach($treonin as $item){
             if(!isset($treonin_by_date[$item['date']])){
                 $treonin_by_date[$item['date']] = $item['value'];
@@ -46,11 +49,13 @@ class Main extends ControllerBase  {
                 $treonin_by_date[$item['date']] = $treonin_by_date[$item['date']] +$item['value'];
             }
         }
+        }
         $this->data['treonin'] = $treonin_by_date;
 
         // izolicin
         $izolicin = $this->mamino->get_amino_by_user('izolicin', $this->data['user']['id']);
         $izolicin_by_date = array();
+        if(!empty($izolicin)){
         foreach($izolicin as $item){
             if(!isset($izolicin_by_date[$item['date']])){
                 $izolicin_by_date[$item['date']] = $item['value'];
@@ -58,12 +63,14 @@ class Main extends ControllerBase  {
                 $izolicin_by_date[$item['date']] = $izolicin_by_date[$item['date']] +$item['value'];
             }
         }
+        }
         $this->data['izolicin'] = $izolicin_by_date;
 
 
         // leycin
         $leycin = $this->mamino->get_amino_by_user('leycin', $this->data['user']['id']);
         $leycin_by_date = array();
+        if(!empty($leycin)){
         foreach($leycin as $item){
             if(!isset($leycin_by_date[$item['date']])){
                 $leycin_by_date[$item['date']] = $item['value'];
@@ -71,12 +78,14 @@ class Main extends ControllerBase  {
                 $leycin_by_date[$item['date']] = $leycin_by_date[$item['date']] +$item['value'];
             }
         }
+        }
         $this->data['leycin'] = $leycin_by_date;
 
 
         // lizin
         $lizin = $this->mamino->get_amino_by_user('lizin', $this->data['user']['id']);
         $lizin_by_date = array();
+        if(!empty($lizin)){
         foreach($lizin as $item){
             if(!isset($lizin_by_date[$item['date']])){
                 $lizin_by_date[$item['date']] = $item['value'];
@@ -84,12 +93,14 @@ class Main extends ControllerBase  {
                 $lizin_by_date[$item['date']] = $lizin_by_date[$item['date']] +$item['value'];
             }
         }
+        }
         $this->data['lizin'] = $lizin_by_date;
 
 
         // fenil
         $fenil = $this->mamino->get_amino_by_user('fenil', $this->data['user']['id']);
         $fenil_by_date = array();
+        if(!empty($fenil)){
         foreach($fenil as $item){
             if(!isset($fenil_by_date[$item['date']])){
                 $fenil_by_date[$item['date']] = $item['value'];
@@ -97,12 +108,14 @@ class Main extends ControllerBase  {
                 $fenil_by_date[$item['date']] = $fenil_by_date[$item['date']] +$item['value'];
             }
         }
+        }
         $this->data['fenil'] = $fenil_by_date;
 
 
         // valin
         $valin = $this->mamino->get_amino_by_user('valin', $this->data['user']['id']);
         $valin_by_date = array();
+        if(!empty($valin)){
         foreach($valin as $item){
             if(!isset($valin_by_date[$item['date']])){
                 $valin_by_date[$item['date']] = $item['value'];
@@ -110,18 +123,21 @@ class Main extends ControllerBase  {
                 $valin_by_date[$item['date']] = $valin_by_date[$item['date']] +$item['value'];
             }
         }
+        }
         $this->data['valin'] = $valin_by_date;
 
 
         // metonin
         $metonin = $this->mamino->get_amino_by_user('metonin', $this->data['user']['id']);
         $metonin_by_date = array();
+        if(!empty($metonin)){
         foreach($metonin as $item){
             if(!isset($metonin_by_date[$item['date']])){
                 $metonin_by_date[$item['date']] = $item['value'];
             }else{
                 $metonin_by_date[$item['date']] = $metonin_by_date[$item['date']] +$item['value'];
             }
+        }
         }
         $this->data['metonin'] = $metonin_by_date;
 
@@ -130,6 +146,7 @@ class Main extends ControllerBase  {
         // tereonin
         $gistidin = $this->mamino->get_amino_by_user('gistidin', $this->data['user']['id']);
         $gistidin_by_date = array();
+        if(!empty($metonin)){
         foreach($gistidin as $item){
             if(!isset($gistidin_by_date[$item['date']])){
                 $gistidin_by_date[$item['date']] = $item['value'];
@@ -137,18 +154,21 @@ class Main extends ControllerBase  {
                 $gistidin_by_date[$item['date']] = $gistidin_by_date[$item['date']] +$item['value'];
             }
         }
+        }
         $this->data['gistidin'] = $gistidin_by_date;
 
 
         // triptofan
         $triptofan = $this->mamino->get_amino_by_user('triptofan', $this->data['user']['id']);
         $triptofan_by_date = array();
+        if(!empty($metonin)){
         foreach($triptofan as $item){
             if(!isset($triptofan_by_date[$item['date']])){
                 $triptofan_by_date[$item['date']] = $item['value'];
             }else{
                 $triptofan_by_date[$item['date']] = $triptofan_by_date[$item['date']] +$item['value'];
             }
+        }
         }
         $this->data['triptofan'] = $triptofan_by_date;
 

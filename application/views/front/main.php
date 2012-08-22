@@ -490,32 +490,33 @@
 
 
 <div class="g_12 separator under_stat"><span></span></div>
-
-<!-- Charts -->
 <div class="g_12">
-    <div class="widget_header">
-        <h4 class="widget_header_title wwIcon i_16_charts">Калории</h4>
-    </div>
-    <div class="widget_contents">
-        <div class="charts_cal"></div>
-    </div>
+					<div class="widget_header cwhToggle">
+						<h4 class="widget_header_title wwIcon i_16_downT "> Калории</h4>
+					</div>
+					<div class="widget_contents noPadding" >
+						<!-- Charts -->
+                        <div class="widget_contents">
+                            <div class="charts_cal"></div>
+                        </div>
+					</div>
 </div>
-
 <div class="g_12 separator under_stat"><span></span></div>
-
-
 <div class="g_12">
+	<div class="widget_header cwhToggle">
+		<h4 class="widget_header_title wwIcon i_16_downT "> Аминокислоты</h4>
+	</div>
+	<div class="widget_contents noPadding" style="height: 0px;">
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Треонин</h4>
     </div>
     <div class="widget_contents">
         <div class="charts_treonin"></div>
     </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
 
-<div class="g_12">
+
+
+<div style="margin-top:10px">
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Изолейцин</h4>
     </div>
@@ -523,82 +524,80 @@
         <div class="charts_izolicin"></div>
     </div>
 </div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
 
-<div class="g_12">
+
+
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Лейцин</h4>
     </div>
     <div class="widget_contents">
         <div class="charts_leycin"></div>
     </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
 
-<div class="g_12">
+
+
+
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Лизин</h4>
     </div>
     <div class="widget_contents">
         <div class="charts_lizin"></div>
     </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
 
-<div class="g_12">
+
+
+
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Фенил-аланин</h4>
     </div>
     <div class="widget_contents">
         <div class="charts_fenil"></div>
     </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
 
-<div class="g_12">
+
+
+
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Валин</h4>
     </div>
     <div class="widget_contents">
         <div class="charts_valin"></div>
     </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
 
-<div class="g_12">
+
+
+
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Метионин</h4>
     </div>
     <div class="widget_contents">
         <div class="charts_metonin"></div>
     </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
 
-<div class="g_12">
+
+
+
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Гистидин</h4>
     </div>
     <div class="widget_contents">
         <div class="charts_gistidin"></div>
     </div>
-</div>
-<!-- Separator -->
-<div class="g_12 separator"><span></span></div>
 
-<div class="g_12">
+
+
     <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_charts">Триптофан</h4>
     </div>
     <div class="widget_contents">
         <div class="charts_triptofan"></div>
     </div>
+
+					</div>
 </div>
+
+<div class="g_12 separator under_stat"><span></span></div>
+
+
 <!-- Separator -->
 <div class="g_12 separator"><span></span></div>
