@@ -22,6 +22,7 @@ class Mcalories extends CI_Model
         $result = $query->result_array();
         return $result ? $result : false;
     }
+   
     function products_list()
     {
         $query = $this->db->get('products');

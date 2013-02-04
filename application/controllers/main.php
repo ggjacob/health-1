@@ -24,7 +24,7 @@ class Main extends ControllerBase  {
             }
         }
         $this->data['norma'] =  $norma_by_name;
-       // echo $this->data['user']['id'];die;
+       // Calories
         $cal = $this->mcalories->get_calories_by_user($this->data['user']['id']);
 
         $calories_by_date = array();
@@ -38,6 +38,21 @@ class Main extends ControllerBase  {
         }
         }
         $this->data['calories'] = $calories_by_date;
+        // Belki
+        $belki = $this->mamino->get_amino_by_user('belki', $this->data['user']['id']);
+
+        $belki_by_date = array();
+        if(!empty($belki)){
+        foreach($belki as $item){
+            if(!isset($calories_by_date[$item['date']])){
+                $belki_by_date[$item['date']] = $item['value'];
+            }else{
+                $belki_by_date[$item['date']] = $belki_by_date[$item['date']] +$item['value'];
+            }
+        }
+        }
+        $this->data['belki'] = $belki_by_date;
+
         // tereonin
         $treonin = $this->mamino->get_amino_by_user('treonin', $this->data['user']['id']);
         $treonin_by_date = array();
@@ -189,7 +204,14 @@ class Main extends ControllerBase  {
     {
         $this->data['menu_item'] =  'forms';
         $this->data['products'] = $this->mproducts->products_list();
-
+        $user_products = $this->mproducts->get_user_product($this->data['user']['id']);
+        $user_products_date = array();
+        if($user_products){
+        foreach($user_products as $prod){
+                $user_products_date[$prod['date']][] = $prod;
+        }
+        }
+        $this->data['user_products'] = $user_products_date;
         $this->data['content'] = 'front/forms';
         $this->load->view('front/layout', $this->data);
     }
@@ -244,6 +266,16 @@ class Main extends ControllerBase  {
         $product = $this->mproducts->get_product($_POST['product']);
         $date_array = explode("/", $_POST['date']);
         $date = $date_array[2].'-'.$date_array[0].'-'.$date_array[1];
+        //user products
+        $data_product = array(
+            'user_id' => $this->data['user']['id'],
+            'weight' => $_POST['weight'],
+            'date' => $date,
+            'product' =>  $product['name']
+
+        );
+        $this->mproducts->set_user_product($data_product);
+
         // Calories
         $calories = $product['calories']*$_POST['weight']/100;
         $data = array(
@@ -252,6 +284,10 @@ class Main extends ControllerBase  {
             'date' => $date
         );
         $this->mcalories->set_calories($data);
+        // belki
+        $belki = $product['belki']*$_POST['weight']/100;
+        $data['value'] = $belki;
+        $this->mamino->set_amino('belki',$data);
         // Treonin
         $treonin = $product['treonin']*$_POST['weight']/100;
         $data['value'] = $treonin;

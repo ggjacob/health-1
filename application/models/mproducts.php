@@ -25,9 +25,21 @@ class Mproducts extends CI_Model
         $result = $query->row_array();
         return $result ? $result : false;
     }
+    function get_user_product($user_id)
+    {
+        $this->db->where('user_id', $user_id);
+        $this->db->order_by('date', 'DESC');
+        $query = $this->db->get('user_products');
+        $result = $query->result_array();
+        return $result ? $result : false;
+    }
     function set_product($data)
     {
         $this->db->insert('products', $data);
+    }
+    function set_user_product($data)
+    {
+        $this->db->insert('user_products', $data);
     }
     function update_product($id, $data)
     {

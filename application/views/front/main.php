@@ -448,6 +448,48 @@
                     monthNames:['Январь', 'Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
                 },
             });
+         var belki = [];
+        var belki_norma = [];
+        <? foreach($belki as $key => $val):?>
+        belki.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
+        belki_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['belki']?>]);
+        <? endforeach;?>
+        // console.log(data);
+        // Display the Sin and Cos Functions
+        $.plot($(".charts_belki"), [ { label: "Норма", data: belki_norma }, { label: "Ваш уровень", data: belki    } ],
+            {
+                colors: ["#00AADD", "#FF6347"],
+
+                series: {
+                    lines: {
+                        show: true,
+                        lineWidth: 2,
+                    },
+                    points: {show: true},
+                    shadowSize: 2,
+                },
+
+                grid: {
+                    hoverable: true,
+                    show: true,
+                    borderWidth: 0,
+                    tickColor: "#d2d2d2",
+                    labelMargin: 12,
+                },
+
+                legend: {
+                    show: true,
+                    margin: [0,-24],
+                    noColumns: 0,
+                    labelBoxBorderColor: null,
+                },
+
+                yaxis: { },
+                xaxis: {mode: "time",
+                    minTickSize: [1, "day"],
+                    monthNames:['Январь', 'Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                },
+            });
 
     });
 </script>
@@ -498,6 +540,18 @@
 						<!-- Charts -->
                         <div class="widget_contents">
                             <div class="charts_cal"></div>
+                        </div>
+					</div>
+</div>
+<div class="g_12 separator under_stat"><span></span></div>
+<div class="g_12">
+					<div class="widget_header cwhToggle">
+						<h4 class="widget_header_title wwIcon i_16_downT "> Белки</h4>
+					</div>
+					<div class="widget_contents noPadding" >
+						<!-- Charts -->
+                        <div class="widget_contents">
+                            <div class="charts_belki"></div>
                         </div>
 					</div>
 </div>

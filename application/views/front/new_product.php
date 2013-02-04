@@ -1,14 +1,18 @@
-<div class="g_6 contents_header">
+<div class="g_12 contents_header">
     <h3 class="i_16_forms tab_label">Внесение нового продукта в базу</h3>
     <div><span class="label">Вместимость белков, аминокислот, калорий в продуктах</span></div>
 </div>
-<div class="g_12 separator"><span></span></div>
-<div class="g_12">
-
-
-
-    <div class="g_12 separator"><span></span></div>
-    <div class="widget_contents noPadding">
+<div class="g_12" id="table_wTabs">
+<div class="widget_header wwOptions">
+						<h4 class="widget_header_title wwIcon i_16_tabs">Внесение нового продукта</h4>
+						<ul class="w_Tabs">
+							<li><a href="#table_wTabs-1" title="Tab 1">Список всех продуктов</a></li>
+							<li><a href="#table_wTabs-2" title="Tab 2">Внесение продукта в базу</a></li>
+						</ul>
+					</div>
+					<div class="widget_contents noPadding">
+                        <div class="g_12" id="table_wTabs-1">
+                            
     <table class="tables">
         <thead>
             <th>Название</th>
@@ -40,8 +44,10 @@
             <? endforeach; ?>
         </tbody>
     </table>
-    </div>
-    <div class="widget_header">
+
+                        </div>
+                        <div class="g_12" id="table_wTabs-2">
+                             <div class="widget_header">
         <h4 class="widget_header_title wwIcon i_16_checkbox">Новый продукт</h4>
     </div>
     <form action="/main/new_product" method="POST">
@@ -133,7 +139,17 @@
             <input type="hidden" value="<?if(isset($edit_product))echo $edit_product['id'];?>"  name="id">
 
 
-            <input type="submit" class="simple_buttons" value="Сохранить">
+            <input type="submit" class="simple_buttons bttn_margin" value="Сохранить">
         </div>
     </form>
+                        </div>
+
+                    </div>
+<div class="g_12">
+
+
+
+    <div class="g_12 separator"><span></span></div>
+
+</div>
 </div>

@@ -273,7 +273,7 @@
                             </div>
                         </div>
 
-                        <input type="submit" class="simple_buttons" value="Сохранить">
+                        <input type="submit" class="simple_buttons bttn_margin" value="Сохранить">
                     </div>
                 </form>
             </div>
