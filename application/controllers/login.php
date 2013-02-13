@@ -11,6 +11,7 @@ class Login extends ControllerBase  {
     }
     public function index()
     {
+
         if(!empty($_POST)){
             $this->load->model('musers');
             $user = $this->musers->get_user($_POST['login']);

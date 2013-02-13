@@ -17,9 +17,13 @@ class Mcalories extends CI_Model
     function get_calories_by_user($user_id)
     {
         $this->db->where('user_id', $user_id);
+        //2 month
+        $this->db->where('date >', date('Y-m-d', time()-2*2629800));
         $this->db->order_by('date','DESC');
+
         $query = $this->db->get('calories');
         $result = $query->result_array();
+        ///echo  $this->db->last_query();die;
         return $result ? $result : false;
     }
    

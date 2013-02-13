@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kanrisha - A Premium HTML5 Responsive Admin Template</title>
+    <title>Аминокислоты - калькулято. Вход</title>
     <link href='http://fonts.googleapis.com/css?family=Andika&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -66,7 +66,7 @@
     <div class="wrapper">
         <div class="user">
             <img src="<?=base_url()?>public/Images/user_avatar.png" alt="user_avatar" class="user_avatar">
-            <span class="label"><a href="#">Sign Up</a></span>
+            <span class="label"><a href="<?=base_url()?>main/registration">Регистрация</a></span>
         </div>
     </div>
 </div>
@@ -75,26 +75,29 @@
 
     <div class="login">
         <div class="widget_header">
-            <h4 class="widget_header_title wwIcon i_16_login">Login</h4>
+            <h4 class="widget_header_title wwIcon i_16_login">Форма авторизации</h4>
         </div>
         <div class="widget_contents lgNoPadding">
-            <form action="<?=base_url()?>/login" method="POST">
+            <form action="<?=base_url()?>login" method="POST" enctype="multipart/form-data">
                 <div class="line_grid">
-                    <div class="g_2 g_2M"><span class="label">User</span></div>
+                    <div class="g_2 g_2M"><span class="label">Логин</span></div>
                     <div class="g_10 g_10M">
                         <input class="simple_field tooltip" title="Your Username" type="text" placeholder="Username" name="login"></div>
                     <div class="clear"></div>
                 </div>
                 <div class="line_grid">
-                    <div class="g_2 g_2M"><span class="label">Pass</span></div>
+                    <div class="g_2 g_2M"><span class="label">Пароль</span></div>
                     <div class="g_10 g_10M">
                         <input class="simple_field tooltip" title="Your Password" type="password"  name="password" value="password">
                     </div>
                     <div class="clear"></div>
                 </div>
                 <div class="line_grid">
-                    <div class="g_6"><input class="submitIt simple_buttons" value="Log In" type="submit">
+                    <div class="g_6"><input class="submitIt simple_buttons" value="Вход" type="submit">
                     </div>
+                    <div class="g_6"><a class="submitIt simple_buttons" href="<?=base_url()?>main/registration">Регистрация </a>
+                    </div>
+
                     <div class="clear"></div>
                 </div>
             </form>

@@ -187,8 +187,20 @@ class Main extends ControllerBase  {
         }
         $this->data['triptofan'] = $triptofan_by_date;
 
-
-
+        // zelezo
+        $zelezo = $this->mamino->get_amino_by_user('zalezo', $this->data['user']['id']);
+        $zelezo_by_date = array();
+        if(!empty($metonin)){
+            foreach($zelezo as $item){
+                if(!isset($zelezo_by_date[$item['date']])){
+                    $zelezo_by_date[$item['date']] = $item['value'];
+                }else{
+                    $zelezo_by_date[$item['date']] = $zelezo_by_date[$item['date']] +$item['value'];
+                }
+            }
+        }
+        $this->data['zelezo'] = $zelezo_by_date;
+//print_r($this->data['zelezo']);die;
 
         $this->data['content'] = 'front/main';
         $this->load->view('front/layout', $this->data);
