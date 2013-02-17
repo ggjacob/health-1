@@ -136,6 +136,20 @@
                     <input type="text" class="simple_field" name="triptofan" value="<?if(isset($edit_product))echo $edit_product['triptofan'];?>" />
                 </div>
             </div>
+            <div class="line_grid">
+                <div class="g_3"><span class="label">Железо( мг в 100г продукта)</span>
+                </div>
+                <div class="g_9">
+                    <input type="text" class="simple_field" name="zelezo" value="<?if(isset($edit_product))echo $edit_product['zelezo'];?>" />
+                </div>
+            </div>
+            <div class="line_grid">
+                <div class="g_3"><span class="label">Витамин С( мг в 100г продукта)</span>
+                </div>
+                <div class="g_9">
+                    <input type="text" class="simple_field" name="vitaminc" value="<?if(isset($edit_product))echo $edit_product['vitaminc'];?>" />
+                </div>
+            </div>
             <input type="hidden" value="<?if(isset($edit_product))echo $edit_product['id'];?>"  name="id">
 
 

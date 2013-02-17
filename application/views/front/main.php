@@ -532,6 +532,48 @@
                     monthNames:['Январь', 'Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
                 }
             });
+        var vitaminc = [];
+        var vitaminc_norma = [];
+    <? foreach($vitaminc as $key => $val):?>
+        vitaminc.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
+        vitaminc_norma.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$norma['vitaminc']?>]);
+        <? endforeach;?>
+        console.log(vitaminc);
+        // Display the Sin and Cos Functions
+        $.plot($(".charts_vitaminc"), [ { label: "Норма", data: vitaminc_norma }, { label: "Ваш уровень", data: vitaminc    } ],
+            {
+                colors: ["#00AADD", "#FF6347"],
+
+                series: {
+                    lines: {
+                        show: true,
+                        lineWidth: 2
+                    },
+                    points: {show: true},
+                    shadowSize: 2
+                },
+
+                grid: {
+                    hoverable: true,
+                    show: true,
+                    borderWidth: 0,
+                    tickColor: "#d2d2d2",
+                    labelMargin: 12
+                },
+
+                legend: {
+                    show: true,
+                    margin: [0,-24],
+                    noColumns: 0,
+                    labelBoxBorderColor: null,
+                },
+
+                yaxis: { },
+                xaxis: {mode: "time",
+                    minTickSize: [1, "day"],
+                    monthNames:['Январь', 'Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
+                }
+            });
     });
 </script>
 <div class="g_6 contents_header">
@@ -605,6 +647,18 @@
         <!-- Charts -->
         <div class="widget_contents">
             <div class="charts_zelezo"></div>
+        </div>
+    </div>
+</div>
+<div class="g_12 separator under_stat"><span></span></div>
+<div class="g_12">
+    <div class="widget_header cwhToggle">
+        <h4 class="widget_header_title wwIcon i_16_downT "> Витамин С</h4>
+    </div>
+    <div class="widget_contents noPadding" >
+        <!-- Charts -->
+        <div class="widget_contents">
+            <div class="charts_vitaminc"></div>
         </div>
     </div>
 </div>

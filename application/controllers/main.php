@@ -200,6 +200,20 @@ class Main extends ControllerBase  {
             }
         }
         $this->data['zelezo'] = $zelezo_by_date;
+
+        // vitamin C
+        $vitaminc = $this->mamino->get_amino_by_user('vitaminc', $this->data['user']['id']);
+        $vitaminc_by_date = array();
+        if(!empty($metonin)){
+            foreach($vitaminc as $item){
+                if(!isset($vitaminc_by_date[$item['date']])){
+                    $vitaminc_by_date[$item['date']] = $item['value'];
+                }else{
+                    $vitaminc_by_date[$item['date']] = $vitaminc_by_date[$item['date']] +$item['value'];
+                }
+            }
+        }
+        $this->data['vitaminc'] = $vitaminc_by_date;
 //print_r($this->data['zelezo']);die;
 
         $this->data['content'] = 'front/main';
@@ -262,6 +276,8 @@ class Main extends ControllerBase  {
                 'metonin' => $_POST['metonin'],
                 'gistidin' => $_POST['gistidin'],
                 'triptofan' => $_POST['triptofan'],
+                'zelezo' => $_POST['zelezo'],
+                'vitaminc' => $_POST['vitaminc'],
             );
             if($_POST['id'] != ''){
                 $this->mproducts->update_product($_POST['id'],$data);
@@ -336,6 +352,14 @@ class Main extends ControllerBase  {
         $triptofan = $product['triptofan']*$_POST['weight']/100;
         $data['value'] = $triptofan;
         $this->mamino->set_amino('triptofan',$data);
+        // zelezo
+        $zelezo = $product['zelezo']*$_POST['weight']/100;
+        $data['value'] = $zelezo;
+        $this->mamino->set_amino('zalezo',$data);
+        // vitamin C
+        $vitaminc = $product['vitaminc']*$_POST['weight']/100;
+        $data['value'] = $vitaminc;
+        $this->mamino->set_amino('vitaminc',$data);
         redirect( '/' );
     }
     public function registration()

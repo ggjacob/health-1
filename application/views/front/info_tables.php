@@ -53,6 +53,8 @@
 <thead>
 <tr>
     <th>Название</th>
+    <th>Железо</th>
+    <th>Витамин С</th>
     <th>Треонин</th>
     <th>Изолейцин</th>
     <th>Лейцин</th>
@@ -67,6 +69,8 @@
 <? foreach($products as $product):?>
 <tr>
     <td><?=$product['name']?></td>
+    <td><?=$product['zelezo']?></td>
+    <td><?=$product['vitaminc']?></td>
     <td><?=$product['treonin']?></td>
     <td><?=$product['izolicin']?></td>
     <td><?=$product['leycin']?></td>
