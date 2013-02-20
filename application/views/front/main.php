@@ -11,10 +11,11 @@
     <? foreach($calories as $key => $val):?>
         data.push([(new Date('<?=$key?>').getTime()-tzOffset), <?=$val?>]);
         // cos2.push(['<?=$key?>', <?=$val?>]);
+
     <? endforeach;?>
-       // console.log(data);
+
         // Display the Sin and Cos Functions
-        $.plot($(".charts_cal"), [ { label: "Cos", data: data }, { label: "Sin", data: data } ],
+        $.plot($(".charts_cal"), [ { label: "Норма", data: data }, { label: "Ваш уровень", data: data } ],
             {
                 colors: ["#00AADD", "#FF6347"],
 
@@ -50,7 +51,7 @@
             });
         // Tooltip Show
         var previousPoint = null;
-        $(".charts_cal").bind("plothover", function (event, pos, item) {
+        $(".charts_cal, .charts_treonin, .charts_izolicin, .charts_leycin, .charts_lizin, .charts_fenil, .charts_valin, .charts_metonin, .charts_gistidin, .charts_triptofan, .charts_belki, .charts_zelezo, .charts_vitaminc").bind("plothover", function (event, pos, item) {
             if (item) {
                 if (previousPoint != item.dataIndex) {
                     previousPoint = item.dataIndex;
@@ -59,7 +60,11 @@
                     });
                     var x = item.datapoint[0].toFixed(2),
                         y = item.datapoint[1].toFixed(2);
-                    km.showTooltip(item.pageX, item.pageY, item.series.label + " of " + x + " = " + y);
+	                tzOffset = new Date();
+	                tzOffset = tzOffset.getTimezoneOffset()*60*1000;
+
+                    km.showTooltip(item.pageX, item.pageY, new Date(x -tzOffset).toDateString()  + " = " + y);
+
                 }
             }
             else {
@@ -574,6 +579,40 @@
                     monthNames:['Январь', 'Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
                 }
             });
+	    $.plot($(".v_bars"), [ { data: [  [20,50]] }, { data: [  [30,80] ] } ],
+		    {
+			    colors: ["#F7810C", "#E82E36"],
+
+			    series: {
+				    lines: {
+					    show: false,
+					    lineWidth: 2,
+				    },
+				    points: {show: false},
+				    shadowSize: 2,
+				    bars: {
+					    show: true,
+					    barWidth: 3,
+					    lineWidth: 1,
+					    fill: 0.8,
+				    }
+			    },
+
+			    grid: {
+				    hoverable: false,
+				    show: true,
+				    borderWidth: 0,
+				    tickColor: "#d2d2d2",
+				    labelMargin: 12,
+			    },
+
+			    legend: {
+				    show: false,
+			    },
+
+			    yaxis: { min: 0, max: 100},
+			    xaxis: { min: 0, max: 50},
+		    });
     });
 </script>
 <div class="g_6 contents_header">
@@ -612,7 +651,16 @@
 
 
 
-
+<div class="g_12 separator under_stat"><span></span></div>
+<!-- Vertical Bars -->
+<div class="g_6">
+	<div class="widget_header">
+		<h4 class="widget_header_title wwIcon i_16_bars">Vertical Bars</h4>
+	</div>
+	<div class="widget_contents">
+		<div class="v_bars"></div>
+	</div>
+</div>
 
 <div class="g_12 separator under_stat"><span></span></div>
 <div class="g_12">
