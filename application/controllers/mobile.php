@@ -7,9 +7,7 @@ class Main extends ControllerBase  {
         parent::__construct();
         $this->load->library('session');
         if($this->session->userdata('is_login') != 'ok')redirect('login');
-	    if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android')) {
-		    redirect('mobile');
-	    }
+
 	    $this->load->model(array('mconfig', 'mpages', 'mmenu', 'marticles', 'mproducts', 'mcalories', 'musers', 'mamino'));
         $this->data['user'] = $this->musers->get_user($this->session->userdata('user'));
        // print_r($this->data['user']);die;
@@ -220,7 +218,7 @@ class Main extends ControllerBase  {
 //print_r($this->data['zelezo']);die;
 
         $this->data['content'] = 'front/main';
-        $this->load->view('front/layout', $this->data);
+        $this->load->view('front/layout_mobile', $this->data);
 	}
 
     public function info()

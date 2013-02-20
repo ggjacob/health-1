@@ -53,15 +53,7 @@
     <script src="<?=base_url()?>public/Javascript/kanrisha.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
-<!-- Change Pattern -->
-<!--div class="changePattern">
-    <span id="pattern1"></span>
-    <span id="pattern2"></span>
-    <span id="pattern3"></span>
-    <span id="pattern4"></span>
-    <span id="pattern5"></span>
-    <span id="pattern6"></span>
-</div-->
+
 <!-- Top Panel -->
 <div class="top_panel">
     <div class="wrapper">
@@ -81,73 +73,7 @@
                 </div>
             </div>
         </div>
-        <div class="top_links">
-            <ul>
-                <li class="i_22_search search_icon">
-                    <div class="top_tooltip right_direction">
-                        <div>
-                            <form class="top_search_form" />
-                            <input type="text" class="top_search_input" />
-                            <input type="submit" class="top_search_submit" value="" />
-                            </form>
-                        </div>
-                    </div>
-                </li>
-                <li class="i_22_settings">
-                    <a href="#" title="Settings">
-                        <span class="label">Settings</span>
-                    </a>
-                </li>
-                <li class="i_22_upload">
-                    <a href="#" title="Upload">
-                        <span class="label">Upload</span>
-                    </a>
-                    <!-- Drop Menu -->
-                    <ul class="drop_menu menu_with_icons right_direction">
-                        <li>
-                            <a class="i_16_add" href="#" title="New Flie">
-                                <span class="label">New File</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="i_16_progress" href="#" title="2 Files Left">
-                                <span class="label">Files Left</span>
-                                <span class="small_count">2</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="i_16_files" href="#" title="Browse Files">
-                                <span class="label">Browse Files</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="i_22_inbox top_inbox">
-                    <a href="#" title="Inbox">
-                        <span class="label lasCount">Inbox</span>
-                        <span class="small_count">3</span>
-                    </a>
-                </li>
-                <li class="i_22_pages">
-                    <a href="#" title="Pages">
-                        <span class="label">Pages</span>
-                    </a>
-                    <!-- Drop Menu -->
-                    <ul class="drop_menu menu_without_icons">
-                        <li>
-                            <a title="403 Page" href="403.html">
-                                <span class="label">403 Forbidden</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="404.html" title="404 Page">
-                                <span class="label">404 Not Found</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+
     </div>
 </div>
 
@@ -158,68 +84,18 @@
                 <img src="<?=base_url()?>public/Images/kanrisha_logo.png" alt="kanrisha_logo" />
             </a>
         </div>
-        <nav class="top_buttons">
-            <ul>
-                <li class="big_button">
-                    <div class="out_border">
-                        <div class="button_wrapper">
-                            <div class="in_border">
-                                <a href="#" title="Analytics" class="the_button">
-                                    <span class="i_32_statistic"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="big_button">
-                    <div class="big_count">
-                        <span>7</span>
-                    </div>
-                    <div class="out_border">
-                        <div class="button_wrapper">
-                            <div class="in_border">
-                                <a href="#" title="Support" class="the_button">
-                                    <span class="i_32_support"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="big_button">
-                    <div class="out_border">
-                        <div class="button_wrapper">
-                            <div class="in_border">
-                                <a href="#" title="Delivery" class="the_button">
-                                    <span class="i_32_delivery"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="big_button">
-                    <div class="out_border">
-                        <div class="button_wrapper">
-                            <div class="in_border">
-                                <a href="#" title="Earning" class="the_button">
-                                    <span class="i_32_dollar"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+
     </div>
 </header>
 
 <div class="wrapper small_menu">
     <ul class="menu_small_buttons">
-        <li><a title="General Info" class="i_22_dashboard smActive" href="index.html"></a></li>
-        <li><a title="Your Messages" class="i_22_inbox" href="inbox.html"></a></li>
-        <li><a title="Visual Data" class="i_22_charts" href="charts.html"></a></li>
-        <li><a title="Kit elements" class="i_22_ui" href="ui.html"></a></li>
-        <li><a title="Some Rows" class="i_22_tables" href="tables.html"></a></li>
-        <li><a title="Some Fields" class="i_22_forms" href="forms.html"></a></li>
+        <li><a title="General Info" class="i_22_dashboard smActive" href="<?=base_url()?>main/mobile"></a></li>
+        <li><a title="Your Messages" class="i_22_inbox" href="<?=base_url()?>main/forms"></a></li>
+        <li><a title="Visual Data" class="i_22_charts" href="<?=base_url()?>main/info"></a></li>
+        <li><a title="Kit elements" class="i_22_ui" href="#"></a></li>
+        <li><a title="Some Rows" class="i_22_tables" href="#"></a></li>
+        <li><a title="Some Fields" class="i_22_forms" href="#"></a></li>
     </ul>
 </div>
 
@@ -246,7 +122,7 @@
             </a>
         </li>
         <li class="i_32_ui">
-            <a href="ui.html" title="Kit elements">
+            <a href="#" title="Kit elements">
                 <span class="tab_label">Статьи</span>
                 <span class="tab_info">Полезное</span>
             </a>
