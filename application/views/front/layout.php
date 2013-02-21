@@ -279,7 +279,7 @@
 <footer>
     <div class="wrapper">
 			<span class="copyright">
-				COPYRIGHT © 2012 Mahieddine Abd-kader
+				COPYRIGHT © 2012
 			</span>
     </div>
 </footer>

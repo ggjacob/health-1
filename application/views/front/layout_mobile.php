@@ -90,12 +90,12 @@
 
 <div class="wrapper small_menu">
     <ul class="menu_small_buttons">
-        <li><a title="General Info" class="i_22_dashboard smActive" href="<?=base_url()?>main/mobile"></a></li>
-        <li><a title="Your Messages" class="i_22_inbox" href="<?=base_url()?>main/forms"></a></li>
-        <li><a title="Visual Data" class="i_22_charts" href="<?=base_url()?>main/info"></a></li>
+        <li><a title="General Info" class="i_22_dashboard smActive" href="<?=base_url()?>mobile"></a></li>
+        <li><a title="Your Messages" class="i_22_forms" href="<?=base_url()?>mobile/forms"></a></li>
+        <!--li><a title="Visual Data" class="i_22_charts" href="<?=base_url()?>main/info"></a></li>
         <li><a title="Kit elements" class="i_22_ui" href="#"></a></li>
         <li><a title="Some Rows" class="i_22_tables" href="#"></a></li>
-        <li><a title="Some Fields" class="i_22_forms" href="#"></a></li>
+        <li><a title="Some Fields" class="i_22_forms" href="#"></a></li-->
     </ul>
 </div>
 
@@ -104,18 +104,18 @@
 <aside class="sidebar">
     <ul class="tab_nav">
         <li class="<? if($menu_item == 'tables')echo 'active_tab ';?> i_32_dashboard">
-            <a href="/" title="General Info">
+            <a href="<?=base_url()?>mobile" title="General Info">
                 <span class="tab_label">Таблица</span>
                 <span class="tab_info">Графики</span>
             </a>
         </li>
         <li class="<? if($menu_item == 'forms')echo 'active_tab ';?> i_32_inbox">
-            <a href="<?=base_url()?>main/forms" title="Your Messages">
+            <a href="<?=base_url()?>mobile/forms" title="Your Messages">
                 <span class="tab_label">Сегодня</span>
                 <span class="tab_info">Ваш баланс</span>
             </a>
         </li>
-        <li class="<? if($menu_item == 'info')echo 'active_tab ';?> i_32_tables">
+        <!--li class="<? if($menu_item == 'info')echo 'active_tab ';?> i_32_tables">
             <a href="<?=base_url()?>main/info" title="Visual Data">
                 <span class="tab_label">Инфо</span>
                 <span class="tab_info">Аминокислоты в продуктах</span>
@@ -132,7 +132,7 @@
                 <span class="tab_label">Внести</span>
                 <span class="tab_info">Новый продукт</span>
             </a>
-        </li>
+        </li-->
         <!--li class="i_32_forms">
             <a href="forms.html" title="Some Fields">
                 <span class="tab_label">Forms</span>
@@ -155,7 +155,7 @@
 <footer>
     <div class="wrapper">
 			<span class="copyright">
-				COPYRIGHT © 2012 Mahieddine Abd-kader
+				COPYRIGHT © 2012 
 			</span>
     </div>
 </footer>

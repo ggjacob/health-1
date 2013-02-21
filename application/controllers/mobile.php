@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Main extends ControllerBase  {
+class Mobile extends ControllerBase  {
 
     function __construct()
     {
@@ -240,8 +240,8 @@ class Main extends ControllerBase  {
         }
         }
         $this->data['user_products'] = $user_products_date;
-        $this->data['content'] = 'front/forms';
-        $this->load->view('front/layout', $this->data);
+        $this->data['content'] = 'front/forms_mobile';
+        $this->load->view('front/layout_mobile', $this->data);
     }
     public function delete_product($id = false)
     {
