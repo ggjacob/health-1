@@ -7,9 +7,7 @@ class Main extends ControllerBase  {
         parent::__construct();
         $this->load->library('session');
         if($this->session->userdata('is_login') != 'ok')redirect('login');
-	    if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android')) {
-		    redirect('mobile');
-	    }
+
 	    $this->load->model(array('mconfig', 'mpages', 'mmenu', 'marticles', 'mproducts', 'mcalories', 'musers', 'mamino'));
         $this->data['user'] = $this->musers->get_user($this->session->userdata('user'));
        // print_r($this->data['user']);die;
@@ -17,6 +15,9 @@ class Main extends ControllerBase  {
     }
 	public function index()
 	{
+		if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android')) {
+			redirect('mobile');
+		}
         $this->data['menu_item'] =  'tables';
         $this->data['user_info'] = $this->musers->get_user_by_id($this->data['user']['id']);
         $norma = $this->mamino->get_norma();
@@ -40,7 +41,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['calories'] = $calories_by_date;
+        $this->data['calories'] = array_slice($calories_by_date, 0, 5);
         // Belki
         $belki = $this->mamino->get_amino_by_user('belki', $this->data['user']['id']);
 
@@ -54,7 +55,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['belki'] = $belki_by_date;
+        $this->data['belki'] =  array_slice($belki_by_date, 0, 5);
 
         // tereonin
         $treonin = $this->mamino->get_amino_by_user('treonin', $this->data['user']['id']);
@@ -68,7 +69,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['treonin'] = $treonin_by_date;
+        $this->data['treonin'] = array_slice($treonin_by_date, 0, 5);
 
         // izolicin
         $izolicin = $this->mamino->get_amino_by_user('izolicin', $this->data['user']['id']);
@@ -82,7 +83,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['izolicin'] = $izolicin_by_date;
+        $this->data['izolicin'] = array_slice($izolicin_by_date, 0, 5);
 
 
         // leycin
@@ -97,7 +98,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['leycin'] = $leycin_by_date;
+        $this->data['leycin'] = array_slice($leycin_by_date, 0, 5);
 
 
         // lizin
@@ -112,7 +113,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['lizin'] = $lizin_by_date;
+        $this->data['lizin'] = array_slice($lizin_by_date, 0, 5);
 
 
         // fenil
@@ -127,7 +128,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['fenil'] = $fenil_by_date;
+        $this->data['fenil'] = array_slice($fenil_by_date, 0, 5);
 
 
         // valin
@@ -142,7 +143,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['valin'] = $valin_by_date;
+        $this->data['valin'] = array_slice($valin_by_date, 0, 5);
 
 
         // metonin
@@ -157,7 +158,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['metonin'] = $metonin_by_date;
+        $this->data['metonin'] = array_slice($metonin_by_date, 0, 5);
 
 
 
@@ -173,7 +174,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['gistidin'] = $gistidin_by_date;
+        $this->data['gistidin'] =  array_slice($gistidin_by_date, 0, 5);
 
 
         // triptofan
@@ -188,7 +189,7 @@ class Main extends ControllerBase  {
             }
         }
         }
-        $this->data['triptofan'] = $triptofan_by_date;
+        $this->data['triptofan'] = array_slice($triptofan_by_date, 0, 5);
 
         // zelezo
         $zelezo = $this->mamino->get_amino_by_user('zalezo', $this->data['user']['id']);
@@ -202,7 +203,7 @@ class Main extends ControllerBase  {
                 }
             }
         }
-        $this->data['zelezo'] = $zelezo_by_date;
+        $this->data['zelezo'] = array_slice($zelezo_by_date, 0, 5);
 
         // vitamin C
         $vitaminc = $this->mamino->get_amino_by_user('vitaminc', $this->data['user']['id']);
@@ -216,7 +217,7 @@ class Main extends ControllerBase  {
                 }
             }
         }
-        $this->data['vitaminc'] = $vitaminc_by_date;
+        $this->data['vitaminc'] = array_slice($vitaminc_by_date, 0, 5);
 //print_r($this->data['zelezo']);die;
 
         $this->data['content'] = 'front/main';

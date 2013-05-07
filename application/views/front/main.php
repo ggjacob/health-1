@@ -652,15 +652,7 @@
 
 
 <div class="g_12 separator under_stat"><span></span></div>
-<!-- Vertical Bars -->
-<div class="g_6">
-	<div class="widget_header">
-		<h4 class="widget_header_title wwIcon i_16_bars">Vertical Bars</h4>
-	</div>
-	<div class="widget_contents">
-		<div class="v_bars"></div>
-	</div>
-</div>
+
 
 <div class="g_12 separator under_stat"><span></span></div>
 <div class="g_12">

@@ -55,14 +55,16 @@
     <th>Название</th>
     <th>Железо</th>
     <th>Витамин С</th>
-    <th>Треонин</th>
+	<th>Белок</th>
+	<th>Калории</th>
+    <!--th>Треонин</th>
     <th>Изолейцин</th>
     <th>Лейцин</th>
     <th>Лизин</th>
     <th>Фенилалан</th>
     <th>Валин</th>
     <th>Метионин</th>
-    <th>Гистидин</th>
+    <th>Гистидин</th-->
 </tr>
 </thead>
 <tbody>
@@ -71,14 +73,16 @@
     <td><?=$product['name']?></td>
     <td><?=$product['zelezo']?></td>
     <td><?=$product['vitaminc']?></td>
-    <td><?=$product['treonin']?></td>
+	<td><?=$product['belki']?></td>
+	<td><?=$product['calories']?></td>
+    <!--td><?=$product['treonin']?></td>
     <td><?=$product['izolicin']?></td>
     <td><?=$product['leycin']?></td>
     <td><?=$product['lizin']?></td>
     <td><?=$product['fenil']?></td>
     <td><?=$product['valin']?></td>
     <td><?=$product['metonin']?></td>
-    <td><?=$product['gistidin']?></td>
+    <td><?=$product['gistidin']?></td-->
 </tr>
 <? endforeach; ?>
 

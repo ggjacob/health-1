@@ -97,7 +97,7 @@
                     </div>
                     <div class="g_6"><a class="submitIt simple_buttons" href="<?=base_url()?>main/registration">Регистрация </a>
                     </div>
-
+                    
                     <div class="clear"></div>
                 </div>
             </form>

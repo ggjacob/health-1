@@ -15,207 +15,206 @@ class Mobile extends ControllerBase  {
     }
 	public function index()
 	{
-        $this->data['menu_item'] =  'tables';
-        $this->data['user_info'] = $this->musers->get_user_by_id($this->data['user']['id']);
-        $norma = $this->mamino->get_norma();
-        $norma_by_name = array();
-        foreach($norma as $item){
-            if(!isset($norma_by_name[$item['date']])){
-                $norma_by_name[$item['name']] = $item['norma'];
-            }
-        }
-        $this->data['norma'] =  $norma_by_name;
-       // Calories
-        $cal = $this->mcalories->get_calories_by_user($this->data['user']['id']);
+		$this->data['menu_item'] =  'tables';
+		$this->data['user_info'] = $this->musers->get_user_by_id($this->data['user']['id']);
+		$norma = $this->mamino->get_norma();
+		$norma_by_name = array();
+		foreach($norma as $item){
+			if(!isset($norma_by_name[$item['date']])){
+				$norma_by_name[$item['name']] = $item['norma'];
+			}
+		}
+		$this->data['norma'] =  $norma_by_name;
+		// Calories
+		$cal = $this->mcalories->get_calories_by_user($this->data['user']['id']);
 
-        $calories_by_date = array();
-        if(!empty($cal)){
-        foreach($cal as $item){
-            if(!isset($calories_by_date[$item['date']])){
-                $calories_by_date[$item['date']] = $item['value'];
-            }else{
-                $calories_by_date[$item['date']] = $calories_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['calories'] = $calories_by_date;
-        // Belki
-        $belki = $this->mamino->get_amino_by_user('belki', $this->data['user']['id']);
+		$calories_by_date = array();
+		if(!empty($cal)){
+			foreach($cal as $item){
+				if(!isset($calories_by_date[$item['date']])){
+					$calories_by_date[$item['date']] = $item['value'];
+				}else{
+					$calories_by_date[$item['date']] = $calories_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['calories'] = array_slice($calories_by_date, 0, 3);
+		// Belki
+		$belki = $this->mamino->get_amino_by_user('belki', $this->data['user']['id']);
 
-        $belki_by_date = array();
-        if(!empty($belki)){
-        foreach($belki as $item){
-            if(!isset($calories_by_date[$item['date']])){
-                $belki_by_date[$item['date']] = $item['value'];
-            }else{
-                $belki_by_date[$item['date']] = $belki_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['belki'] = $belki_by_date;
+		$belki_by_date = array();
+		if(!empty($belki)){
+			foreach($belki as $item){
+				if(!isset($calories_by_date[$item['date']])){
+					$belki_by_date[$item['date']] = $item['value'];
+				}else{
+					$belki_by_date[$item['date']] = $belki_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['belki'] =  array_slice($belki_by_date, 0, 3);
 
-        // tereonin
-        $treonin = $this->mamino->get_amino_by_user('treonin', $this->data['user']['id']);
-        $treonin_by_date = array();
-        if(!empty($treonin)){
-        foreach($treonin as $item){
-            if(!isset($treonin_by_date[$item['date']])){
-                $treonin_by_date[$item['date']] = $item['value'];
-            }else{
-                $treonin_by_date[$item['date']] = $treonin_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['treonin'] = $treonin_by_date;
+		// tereonin
+		$treonin = $this->mamino->get_amino_by_user('treonin', $this->data['user']['id']);
+		$treonin_by_date = array();
+		if(!empty($treonin)){
+			foreach($treonin as $item){
+				if(!isset($treonin_by_date[$item['date']])){
+					$treonin_by_date[$item['date']] = $item['value'];
+				}else{
+					$treonin_by_date[$item['date']] = $treonin_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['treonin'] = array_slice($treonin_by_date, 0, 3);
 
-        // izolicin
-        $izolicin = $this->mamino->get_amino_by_user('izolicin', $this->data['user']['id']);
-        $izolicin_by_date = array();
-        if(!empty($izolicin)){
-        foreach($izolicin as $item){
-            if(!isset($izolicin_by_date[$item['date']])){
-                $izolicin_by_date[$item['date']] = $item['value'];
-            }else{
-                $izolicin_by_date[$item['date']] = $izolicin_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['izolicin'] = $izolicin_by_date;
-
-
-        // leycin
-        $leycin = $this->mamino->get_amino_by_user('leycin', $this->data['user']['id']);
-        $leycin_by_date = array();
-        if(!empty($leycin)){
-        foreach($leycin as $item){
-            if(!isset($leycin_by_date[$item['date']])){
-                $leycin_by_date[$item['date']] = $item['value'];
-            }else{
-                $leycin_by_date[$item['date']] = $leycin_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['leycin'] = $leycin_by_date;
+		// izolicin
+		$izolicin = $this->mamino->get_amino_by_user('izolicin', $this->data['user']['id']);
+		$izolicin_by_date = array();
+		if(!empty($izolicin)){
+			foreach($izolicin as $item){
+				if(!isset($izolicin_by_date[$item['date']])){
+					$izolicin_by_date[$item['date']] = $item['value'];
+				}else{
+					$izolicin_by_date[$item['date']] = $izolicin_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['izolicin'] = array_slice($izolicin_by_date, 0, 3);
 
 
-        // lizin
-        $lizin = $this->mamino->get_amino_by_user('lizin', $this->data['user']['id']);
-        $lizin_by_date = array();
-        if(!empty($lizin)){
-        foreach($lizin as $item){
-            if(!isset($lizin_by_date[$item['date']])){
-                $lizin_by_date[$item['date']] = $item['value'];
-            }else{
-                $lizin_by_date[$item['date']] = $lizin_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['lizin'] = $lizin_by_date;
+		// leycin
+		$leycin = $this->mamino->get_amino_by_user('leycin', $this->data['user']['id']);
+		$leycin_by_date = array();
+		if(!empty($leycin)){
+			foreach($leycin as $item){
+				if(!isset($leycin_by_date[$item['date']])){
+					$leycin_by_date[$item['date']] = $item['value'];
+				}else{
+					$leycin_by_date[$item['date']] = $leycin_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['leycin'] = array_slice($leycin_by_date, 0, 3);
 
 
-        // fenil
-        $fenil = $this->mamino->get_amino_by_user('fenil', $this->data['user']['id']);
-        $fenil_by_date = array();
-        if(!empty($fenil)){
-        foreach($fenil as $item){
-            if(!isset($fenil_by_date[$item['date']])){
-                $fenil_by_date[$item['date']] = $item['value'];
-            }else{
-                $fenil_by_date[$item['date']] = $fenil_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['fenil'] = $fenil_by_date;
+		// lizin
+		$lizin = $this->mamino->get_amino_by_user('lizin', $this->data['user']['id']);
+		$lizin_by_date = array();
+		if(!empty($lizin)){
+			foreach($lizin as $item){
+				if(!isset($lizin_by_date[$item['date']])){
+					$lizin_by_date[$item['date']] = $item['value'];
+				}else{
+					$lizin_by_date[$item['date']] = $lizin_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['lizin'] = array_slice($lizin_by_date, 0, 3);
 
 
-        // valin
-        $valin = $this->mamino->get_amino_by_user('valin', $this->data['user']['id']);
-        $valin_by_date = array();
-        if(!empty($valin)){
-        foreach($valin as $item){
-            if(!isset($valin_by_date[$item['date']])){
-                $valin_by_date[$item['date']] = $item['value'];
-            }else{
-                $valin_by_date[$item['date']] = $valin_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['valin'] = $valin_by_date;
+		// fenil
+		$fenil = $this->mamino->get_amino_by_user('fenil', $this->data['user']['id']);
+		$fenil_by_date = array();
+		if(!empty($fenil)){
+			foreach($fenil as $item){
+				if(!isset($fenil_by_date[$item['date']])){
+					$fenil_by_date[$item['date']] = $item['value'];
+				}else{
+					$fenil_by_date[$item['date']] = $fenil_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['fenil'] = array_slice($fenil_by_date, 0, 3);
 
 
-        // metonin
-        $metonin = $this->mamino->get_amino_by_user('metonin', $this->data['user']['id']);
-        $metonin_by_date = array();
-        if(!empty($metonin)){
-        foreach($metonin as $item){
-            if(!isset($metonin_by_date[$item['date']])){
-                $metonin_by_date[$item['date']] = $item['value'];
-            }else{
-                $metonin_by_date[$item['date']] = $metonin_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['metonin'] = $metonin_by_date;
+		// valin
+		$valin = $this->mamino->get_amino_by_user('valin', $this->data['user']['id']);
+		$valin_by_date = array();
+		if(!empty($valin)){
+			foreach($valin as $item){
+				if(!isset($valin_by_date[$item['date']])){
+					$valin_by_date[$item['date']] = $item['value'];
+				}else{
+					$valin_by_date[$item['date']] = $valin_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['valin'] = array_slice($valin_by_date, 0, 3);
+
+
+		// metonin
+		$metonin = $this->mamino->get_amino_by_user('metonin', $this->data['user']['id']);
+		$metonin_by_date = array();
+		if(!empty($metonin)){
+			foreach($metonin as $item){
+				if(!isset($metonin_by_date[$item['date']])){
+					$metonin_by_date[$item['date']] = $item['value'];
+				}else{
+					$metonin_by_date[$item['date']] = $metonin_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['metonin'] = array_slice($metonin_by_date, 0, 3);
 
 
 
-        // tereonin
-        $gistidin = $this->mamino->get_amino_by_user('gistidin', $this->data['user']['id']);
-        $gistidin_by_date = array();
-        if(!empty($metonin)){
-        foreach($gistidin as $item){
-            if(!isset($gistidin_by_date[$item['date']])){
-                $gistidin_by_date[$item['date']] = $item['value'];
-            }else{
-                $gistidin_by_date[$item['date']] = $gistidin_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['gistidin'] = $gistidin_by_date;
+		// tereonin
+		$gistidin = $this->mamino->get_amino_by_user('gistidin', $this->data['user']['id']);
+		$gistidin_by_date = array();
+		if(!empty($metonin)){
+			foreach($gistidin as $item){
+				if(!isset($gistidin_by_date[$item['date']])){
+					$gistidin_by_date[$item['date']] = $item['value'];
+				}else{
+					$gistidin_by_date[$item['date']] = $gistidin_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['gistidin'] =  array_slice($gistidin_by_date, 0, 3);
 
 
-        // triptofan
-        $triptofan = $this->mamino->get_amino_by_user('triptofan', $this->data['user']['id']);
-        $triptofan_by_date = array();
-        if(!empty($metonin)){
-        foreach($triptofan as $item){
-            if(!isset($triptofan_by_date[$item['date']])){
-                $triptofan_by_date[$item['date']] = $item['value'];
-            }else{
-                $triptofan_by_date[$item['date']] = $triptofan_by_date[$item['date']] +$item['value'];
-            }
-        }
-        }
-        $this->data['triptofan'] = $triptofan_by_date;
+		// triptofan
+		$triptofan = $this->mamino->get_amino_by_user('triptofan', $this->data['user']['id']);
+		$triptofan_by_date = array();
+		if(!empty($metonin)){
+			foreach($triptofan as $item){
+				if(!isset($triptofan_by_date[$item['date']])){
+					$triptofan_by_date[$item['date']] = $item['value'];
+				}else{
+					$triptofan_by_date[$item['date']] = $triptofan_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['triptofan'] = array_slice($triptofan_by_date, 0, 3);
 
-        // zelezo
-        $zelezo = $this->mamino->get_amino_by_user('zalezo', $this->data['user']['id']);
-        $zelezo_by_date = array();
-        if(!empty($metonin)){
-            foreach($zelezo as $item){
-                if(!isset($zelezo_by_date[$item['date']])){
-                    $zelezo_by_date[$item['date']] = $item['value'];
-                }else{
-                    $zelezo_by_date[$item['date']] = $zelezo_by_date[$item['date']] +$item['value'];
-                }
-            }
-        }
-        $this->data['zelezo'] = $zelezo_by_date;
+		// zelezo
+		$zelezo = $this->mamino->get_amino_by_user('zalezo', $this->data['user']['id']);
+		$zelezo_by_date = array();
+		if(!empty($metonin)){
+			foreach($zelezo as $item){
+				if(!isset($zelezo_by_date[$item['date']])){
+					$zelezo_by_date[$item['date']] = $item['value'];
+				}else{
+					$zelezo_by_date[$item['date']] = $zelezo_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['zelezo'] = array_slice($zelezo_by_date, 0, 3);
 
-        // vitamin C
-        $vitaminc = $this->mamino->get_amino_by_user('vitaminc', $this->data['user']['id']);
-        $vitaminc_by_date = array();
-        if(!empty($metonin)){
-            foreach($vitaminc as $item){
-                if(!isset($vitaminc_by_date[$item['date']])){
-                    $vitaminc_by_date[$item['date']] = $item['value'];
-                }else{
-                    $vitaminc_by_date[$item['date']] = $vitaminc_by_date[$item['date']] +$item['value'];
-                }
-            }
-        }
-        $this->data['vitaminc'] = $vitaminc_by_date;
-//print_r($this->data['zelezo']);die;
+		// vitamin C
+		$vitaminc = $this->mamino->get_amino_by_user('vitaminc', $this->data['user']['id']);
+		$vitaminc_by_date = array();
+		if(!empty($metonin)){
+			foreach($vitaminc as $item){
+				if(!isset($vitaminc_by_date[$item['date']])){
+					$vitaminc_by_date[$item['date']] = $item['value'];
+				}else{
+					$vitaminc_by_date[$item['date']] = $vitaminc_by_date[$item['date']] +$item['value'];
+				}
+			}
+		}
+		$this->data['vitaminc'] = array_slice($vitaminc_by_date, 0, 3);
 
         $this->data['content'] = 'front/main';
         $this->load->view('front/layout_mobile', $this->data);
